@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | Evimes &mdash; Agencia Digital en Madrid</title>
+  <meta name="description" content="Conoce a Evimes y a Oscar Pato Sarmiento. Agencia digital en Madrid especializada en identidad digital, diseño web con IA y marketing de crecimiento para negocios locales.">
+  <meta name="keywords" content="agencia digital madrid, dise&ntilde;o web madrid, marketing digital madrid, nosotros evimes, oscar pato sarmiento, identidad digital madrid">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Evimes">
+  <meta name="geo.region" content="ES-MD">
+  <meta name="geo.placename" content="Madrid">
+  <meta name="geo.position" content="40.4168;-3.7038">
+  <meta name="ICBM" content="40.4168, -3.7038">
+  <link rel="canonical" href="https://evimes.com/nosotros.html">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nosotros | Evimes &mdash; Agencia Digital en Madrid">
+  <meta property="og:description" content="Conoce a Evimes, la agencia digital en Madrid que transforma negocios locales en l&iacute;deres de su sector con dise&ntilde;o web, IA y marketing digital.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://evimes.com/nosotros.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Evimes">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nosotros | Evimes &mdash; Agencia Digital en Madrid">
+  <meta name="twitter:description" content="Conoce a Evimes y a Oscar Pato Sarmiento. Dise&ntilde;o web, IA y marketing digital para negocios locales en Madrid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.beams-bg{will-change:transform;transform:translateZ(0)}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:root{
+  --void:#04040a;--white:#fff;
+  --w90:rgba(255,255,255,.9);--w60:rgba(255,255,255,.6);
+  --w30:rgba(255,255,255,.3);--w15:rgba(255,255,255,.15);
+  --w08:rgba(255,255,255,.08);--w04:rgba(255,255,255,.04);
+  --w02:rgba(255,255,255,.022);
+  --cyan:#4aadaa;--cyan30:rgba(74,173,170,.3);--cyan10:rgba(74,173,170,.1);
+  --serif:'Instrument Serif',serif;
+  --mono:'JetBrains Mono',monospace;
+  --body:'Libre Baskerville',serif;
+  --highlight-hue:210deg;
+}
+html{overflow-x:clip}
+body{background:var(--void);color:var(--white);font-family:var(--body);line-height:1.7;overflow-x:clip}
+::selection{background:var(--cyan30);color:var(--white)}
+*{cursor:auto!important}
+a,button,[role="button"],[onclick],input[type="submit"]{cursor:pointer!important}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.9s ease,visibility 0.9s ease}
+#loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+body.loading{overflow:hidden}
+.loader-inner{display:flex;flex-direction:column;align-items:center;gap:52px}
+.loader-logo-wrap{width:260px;display:flex;justify-content:center}
+.loader-logo-img{width:160px;height:auto;display:block;opacity:0;animation:ldrLogoIn 1.0s cubic-bezier(0.4,0,0.2,1) 0.3s forwards}
+@keyframes ldrLogoIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+.loader-bar-wrap{width:100px;height:1px;background:rgba(255,255,255,0.1);overflow:hidden;opacity:0;animation:ldrFadeIn 0.4s ease 1.0s forwards}
+.loader-bar{height:100%;width:0%;background:#fff;transition:width 0.1s linear}
+@keyframes ldrFadeIn{to{opacity:1}}
+
+/* PAGE */
+#page{opacity:0;transition:opacity 1.2s cubic-bezier(.25,.1,.25,1)}
+#page.visible{opacity:1}
+
+/* BEAMS */
+.beams-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;filter:blur(6px);opacity:1}
+
+/* NAV */
+#navbar-capsule{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;display:inline-flex;align-items:center;gap:0;padding:4px 6px;border-radius:50px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);transition:background .3s ease,box-shadow .3s ease;white-space:nowrap}
+#navbar-capsule.scrolled{background:rgba(255,255,255,0.08);box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.nav-link{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.8px;font-weight:400;text-transform:uppercase;text-decoration:none;padding:7px 18px;border-radius:50px;color:rgba(255,255,255,0.5);transition:color .3s ease-out,background .3s ease-out;cursor:pointer!important;position:relative;z-index:1}
+.nav-link.active{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)}
+.nav-link:hover:not(.active){color:rgba(255,255,255,0.85)}
+@media(max-width:768px){#navbar-capsule{top:12px;padding:4px 6px}.nav-link{font-size:11px;letter-spacing:.5px;padding:8px 14px}}
+
+/* HERO */
+#ns-hero{position:relative;width:100%;height:60vh;display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:1}
+.ns-hero-heading{text-align:center;display:flex;flex-direction:column;align-items:center;gap:0;opacity:0;transform:translateY(20px);animation:heroFadeIn 1s ease-out 0.5s forwards}
+@keyframes heroFadeIn{to{opacity:1;transform:translateY(0)}}
+.ns-hero-line1{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,5vw,4.5rem);font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#ffffff;line-height:1.05;display:block}
+.ns-hero-line2{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,5vw,4.5rem);font-weight:700;letter-spacing:8px;text-transform:uppercase;color:#5bb8a9;line-height:1.05;display:block}
+
+/* PROFILE SECTION */
+.profile-section{position:relative;z-index:1;max-width:1100px;margin:0 auto 0;padding:0 40px;margin-top:80px}
+.profile-cards{display:flex;gap:30px;align-items:stretch}
+@media(max-width:768px){
+  .profile-cards{flex-direction:column}
+  .profile-section{padding:0 24px;margin-top:60px}
+}
+
+/* Glass card base */
+.glass-card{background:linear-gradient(135deg,rgba(0,150,255,0.15) 0%,rgba(80,60,200,0.12) 30%,rgba(10,12,25,0.9) 60%,rgba(0,200,255,0.12) 100%);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(0,229,255,0.12);border-radius:20px;position:relative;overflow:hidden;transition:border-color .4s ease-out,box-shadow .4s ease-out,transform .4s ease-out}
+.glass-card:hover{border-color:rgba(0,229,255,0.28);box-shadow:0 0 25px rgba(0,229,255,0.08),0 20px 60px rgba(0,0,0,0.4);transform:translateY(-3px)}
+.glass-card::after{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(0,229,255,0.3),transparent);pointer-events:none;z-index:2}
+
+/* Photo card */
+.profile-photo-card{flex:0 0 40%;padding:15px;position:relative}
+@media(max-width:768px){.profile-photo-card{flex:none;width:100%;max-height:400px;overflow:hidden}}
+
+/* Spinning border on photo card */
+@keyframes borderSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.profile-photo-card .spin-border{position:absolute;inset:-1px;border-radius:21px;overflow:hidden;z-index:0;pointer-events:none}
+.profile-photo-card .spin-border::before{content:'';position:absolute;inset:-50%;background:conic-gradient(from 0deg,rgba(0,229,255,0.5),rgba(139,92,246,0.5),rgba(0,180,220,0.3),rgba(120,50,220,0.4),rgba(0,229,255,0.5));animation:borderSpin 5s linear infinite;z-index:0}
+.profile-photo-card .spin-border::after{content:'';position:absolute;inset:2px;border-radius:19px;background:linear-gradient(135deg,rgba(0,150,255,0.15) 0%,rgba(80,60,200,0.12) 30%,rgba(10,12,25,0.9) 60%,rgba(0,200,255,0.12) 100%);z-index:1}
+.profile-photo-wrap{position:relative;z-index:2;width:100%;height:100%;min-height:420px;border-radius:14px;overflow:hidden}
+.profile-photo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
+@media(max-width:768px){.profile-photo-wrap{min-height:340px}}
+
+/* Bio card */
+.profile-bio-card{flex:1;padding:40px}
+.bio-label{font-family:'Inter',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:rgba(0,229,255,0.6);margin-bottom:12px;display:block}
+.bio-name{font-family:'Libre Baskerville',serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:20px;line-height:1.2}
+.bio-text{font-family:'Inter',sans-serif;font-size:0.95rem;line-height:1.8;color:rgba(255,255,255,0.55)}
+
+/* Spotlight effect on cards */
+.glass-card .spotlight{position:absolute;inset:0;border-radius:inherit;z-index:1;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,229,255,0.07) 0%,rgba(139,92,246,0.04) 30%,transparent 65%);opacity:0;transition:opacity .3s}
+.glass-card:hover .spotlight{opacity:1}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease-out,transform .8s ease-out}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv-delay-1{transition-delay:200ms}
+.rv-delay-2{transition-delay:400ms}
+
+/* COMPANY SECTION */
+.company-section{position:relative;z-index:1;margin-top:150px;padding:0 40px}
+.company-heading{text-align:center;margin-bottom:80px}
+.company-h2{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:#fff;letter-spacing:4px;margin-bottom:16px}
+.company-sub{font-family:'Inter',sans-serif;font-size:1.1rem;color:rgba(255,255,255,0.5);max-width:600px;margin:0 auto}
+.pillars{display:flex;flex-direction:column;gap:60px;max-width:1000px;margin:0 auto}
+@media(max-width:768px){.company-section{padding:0 24px;margin-top:100px}.pillars{gap:40px}}
+
+/* Pillar card */
+.pillar-card{padding:50px;display:flex;align-items:center;gap:0}
+.pillar-card.reverse{flex-direction:row-reverse}
+.pillar-text{flex:0 0 60%;padding-right:40px}
+.pillar-card.reverse .pillar-text{padding-right:0;padding-left:40px}
+.pillar-svg-area{flex:0 0 40%;display:flex;align-items:center;justify-content:center;min-height:180px}
+.pillar-h3{font-family:'Libre Baskerville',serif;font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:16px;line-height:1.2}
+.pillar-p{font-family:'Inter',sans-serif;font-size:0.95rem;line-height:1.8;color:rgba(255,255,255,0.55)}
+@media(max-width:768px){
+  .pillar-card,.pillar-card.reverse{flex-direction:column;padding:36px 24px}
+  .pillar-text,.pillar-card.reverse .pillar-text{padding-right:0;padding-left:0}
+  .pillar-svg-area{display:none}
+}
+
+/* CTA SECTION */
+.cta-section{margin-top:100px;text-align:center;padding:0 40px;position:relative;z-index:1}
+.cta-h2{font-family:'Libre Baskerville',serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:12px}
+.cta-sub{font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,0.5);margin-bottom:30px}
+
+/* CTA BUTTONS */
+.cta-pair{display:flex;align-items:center;gap:20px;justify-content:center}
+.btn-glow-outer{position:relative;border-radius:50px;display:inline-flex;cursor:pointer!important}
+.btn-glow-outer::after{content:'';position:absolute;inset:-5px;border-radius:50px;background:linear-gradient(90deg,#00e5ff,#8b5cf6,#00e5ff);background-size:200% 100%;animation:gradientShift 3s ease-in-out infinite;filter:blur(12px);opacity:0.2;pointer-events:none;transition:opacity .3s ease-out;z-index:0}
+.btn-glow-outer:hover::after{opacity:0.4;animation-duration:1.5s}
+.btn-glow-outer::before{content:'';position:absolute;inset:0;border-radius:50px;padding:1.5px;background:linear-gradient(90deg,#00e5ff,#8b5cf6,#00e5ff);background-size:200% 100%;animation:gradientShift 3s ease-in-out infinite;pointer-events:none;z-index:1;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:destination-out;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude}
+.btn-glow-outer:hover::before{animation-duration:1.5s}
+.btn-glow-inner{position:relative;border-radius:50px;background:transparent;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:2;padding:10px 22px;transition:transform .3s ease-out;cursor:pointer!important}
+.btn-glow-outer:hover .btn-glow-inner{transform:scale(1.03)}
+.btn-glow-outer:active .btn-glow-inner{transform:scale(0.97);transition-duration:.1s}
+.btn-glow-text{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;pointer-events:none;transition:text-shadow .3s ease-out;white-space:nowrap}
+.btn-glow-outer:hover .btn-glow-text{text-shadow:0 0 8px rgba(0,229,255,0.4)}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.btn-text-link{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;cursor:pointer!important;transition:color .3s ease-out,text-shadow .3s ease-out;white-space:nowrap}
+.btn-text-link::after{content:' →'}
+.btn-text-link:hover{color:rgba(255,255,255,0.9);text-shadow:0 0 8px rgba(0,229,255,0.2)}
+@media(max-width:768px){.cta-pair{flex-direction:column;gap:12px;align-items:center}}
+
+/* TOOLS CAROUSEL */
+.tc-wrap{padding:32px 0;position:relative;z-index:1;max-width:calc(100vw - 80px);margin:100px auto 0}
+.tc-outer{position:relative;overflow:hidden;isolation:isolate;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%)}
+.tc-track{display:flex;width:max-content;animation:tc-scroll 32s linear infinite}
+@keyframes tc-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tc-slot{display:flex;align-items:center;justify-content:center;flex-shrink:0;margin:0 52px}
+.tc-slot img{height:35px;width:auto;max-width:150px;object-fit:contain;display:block;filter:brightness(0) invert(1);opacity:0.65;transition:opacity .3s ease-out,filter .3s ease-out}
+.tc-slot img[src$=".png"]{height:170px;max-width:340px}
+.tc-slot img[src*="NOTION"]{filter:none;opacity:0.8}
+.tc-slot img[src*="NOTION"]:hover{opacity:1}
+.tc-slot img:hover{opacity:0.9}
+
+/* FOOTER */
+#main-footer{margin-top:150px;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1}
+.footer-inner{max-width:1200px;margin:0 auto;position:relative;z-index:5}
+.footer-evimes-wm{display:block;text-align:center;font-family:'Libre Baskerville',serif;font-size:clamp(8rem,15vw,16rem);font-weight:700;letter-spacing:10px;color:transparent;background:linear-gradient(135deg,rgba(0,229,255,0.35) 0%,rgba(139,92,246,0.35) 50%,rgba(0,200,255,0.3) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px rgba(0,229,255,0.2);pointer-events:none;z-index:0;white-space:nowrap;line-height:1;user-select:none;margin-bottom:40px;overflow:hidden}
+.footer-heading{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}
+.footer-heading.vis{opacity:1;transform:translateY(0)}
+.footer-h2{font-family:'Libre Baskerville',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:16px;line-height:1.2;text-align:center}
+.footer-desc{font-family:'Inter',sans-serif;font-size:clamp(0.9rem,1.5vw,1.1rem);color:rgba(255,255,255,0.5);max-width:500px;line-height:1.6;margin-bottom:60px;text-align:center;margin-left:auto;margin-right:auto}
+.footer-cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;opacity:0;transform:translateY(20px);transition:opacity .8s ease-out .2s,transform .8s ease-out .2s}
+.footer-cols.vis{opacity:1;transform:translateY(0)}
+.footer-col-title{font-family:'Inter',sans-serif;font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-bottom:16px}
+.footer-nav-links,.footer-legal-links{display:flex;flex-direction:column;gap:10px}
+.footer-nav-links a{font-family:'Inter',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .3s;cursor:pointer!important}
+.footer-nav-links a:hover{color:#fff}
+.footer-legal-links a{font-family:'Inter',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .3s;cursor:pointer!important}
+.footer-legal-links a:hover{color:rgba(255,255,255,0.7)}
+.footer-btn-outer{position:relative;border-radius:50px;width:auto;height:38px;padding:0}
+.footer-btn-outer::after{content:'';position:absolute;inset:-5px;border-radius:50px;background:linear-gradient(90deg,#00e5ff,#8b5cf6,#00e5ff);background-size:200% 100%;animation:gradientShift 3s ease-in-out infinite;filter:blur(12px);opacity:0.2;pointer-events:none;transition:opacity .3s ease-out;z-index:0}
+.footer-cta-wrap:hover .footer-btn-outer::after{opacity:0.4;animation-duration:1.5s}
+.footer-btn-outer::before{content:'';position:absolute;inset:0;border-radius:50px;padding:1.5px;background:linear-gradient(90deg,#00e5ff,#8b5cf6,#00e5ff);background-size:200% 100%;animation:gradientShift 3s ease-in-out infinite;pointer-events:none;z-index:1;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:destination-out;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude}
+.footer-cta-wrap:hover .footer-btn-outer::before{animation-duration:1.5s}
+.footer-cta-wrap{display:flex;align-items:flex-start;cursor:pointer!important}
+.footer-cta-wrap *{cursor:pointer!important}
+.footer-btn-inner{position:relative;border-radius:50px;background:transparent;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:2;transition:transform .3s ease-out;padding:10px 24px}
+.footer-cta-wrap:hover .footer-btn-inner{transform:scale(1.03)}
+.footer-cta-wrap:active .footer-btn-inner{transform:scale(0.97);transition-duration:.1s}
+.footer-btn-text{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:#ffffff;pointer-events:none;transition:text-shadow .3s ease-out;white-space:nowrap}
+.footer-cta-wrap:hover .footer-btn-text{text-shadow:0 0 8px rgba(0,229,255,0.4)}
+.footer-copy-bar{margin-top:60px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);text-align:center}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.25)}
+@media(max-width:768px){
+  #main-footer{padding:80px 24px 40px}
+  .footer-evimes-wm{display:none}
+  .footer-cols{flex-direction:column;align-items:center;text-align:center}
+  .footer-nav-links,.footer-legal-links{align-items:center}
+  .footer-desc{margin-left:auto;margin-right:auto}
+  .cta-section{padding:0 24px}
+}
+
+/* SVG illustration shared styles */
+.pillar-svg{overflow:visible;display:block}
+.p-stroke{fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+</style>
+</head>
+<body>
+<canvas id="beamsCanvas" class="beams-bg"></canvas>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo-wrap">
+      <img src="assets/logo.png" class="loader-logo-img" alt="EVIMES">
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE -->
+<div id="page">
+
+  <nav id="navbar-capsule">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="servicios.html" class="nav-link">Servicios</a>
+    <a href="nosotros.html" class="nav-link active">Nosotros</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+
+  <!-- HERO -->
+  <div id="ns-hero">
+    <div class="ns-hero-heading">
+      <span class="ns-hero-line1">Qui&eacute;nes</span>
+      <span class="ns-hero-line2">Somos</span>
+    </div>
+  </div>
+
+  <!-- PROFILE SECTION -->
+  <div class="profile-section">
+    <div class="profile-cards">
+
+      <!-- Photo card -->
+      <div class="glass-card profile-photo-card rv" id="photoCard">
+        <div class="spotlight"></div>
+        <div class="spin-border"></div>
+        <div class="profile-photo-wrap">
+          <img src="assets/Nosotros.fotos/Untitled design (3).png" alt="Oscar Pato Sarmiento — Founder & Director Creativo de Evimes">
+        </div>
+      </div>
+
+      <!-- Bio card -->
+      <div class="glass-card profile-bio-card rv rv-delay-1" id="bioCard">
+        <div class="spotlight"></div>
+        <span class="bio-label">Founder &amp; Director Creativo</span>
+        <h1 class="bio-name">Oscar Pato Sarmiento</h1>
+        <p class="bio-text">Oscar Pato Sarmiento es un perfil multidisciplinar que integra la creatividad de la Comunicaci&oacute;n Audiovisual con la solidez t&eacute;cnica del Desarrollo Web y la visi&oacute;n de un Estratega de Marketing. Especializado en dise&ntilde;ar experiencias digitales integrales, Oscar no solo construye interfaces funcionales, sino que desarrolla activos digitales optimizados para el posicionamiento y la conversi&oacute;n de negocio. Su enfoque combina una narrativa visual impecable con soluciones t&eacute;cnicas a medida, permitiendo que cada proyecto destaque por su coherencia est&eacute;tica y su eficacia estrat&eacute;gica en el mercado actual.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMPANY SECTION -->
+  <div class="company-section">
+    <div class="company-heading rv">
+      <h2 class="company-h2">EVIMES</h2>
+      <p class="company-sub">Creamos la huella digital que tu marca necesita para dominar</p>
+    </div>
+
+    <div class="pillars">
+
+      <!-- Pillar 1: Qué Hacemos -->
+      <div class="glass-card pillar-card rv" id="pillar1">
+        <div class="spotlight"></div>
+        <div class="pillar-text">
+          <h3 class="pillar-h3">Qu&eacute; Hacemos</h3>
+          <p class="pillar-p">Somos una agencia digital que crea huellas de identidad digital para marcas que necesitan destacar en el mundo online. No construimos solo p&aacute;ginas web &mdash; dise&ntilde;amos ecosistemas digitales completos que posicionan, atraen y convierten. Implementamos estrategias potenciadas con inteligencia artificial avanzada para generar ventas reales y medibles para tu negocio.</p>
+        </div>
+        <div class="pillar-svg-area">
+          <!-- Fingerprint → Circuit SVG -->
+          <svg class="pillar-svg" id="svg-fingerprint" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pGrad1a" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.7"/>
+              </linearGradient>
+              <linearGradient id="pGrad1b" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.9"/>
+              </linearGradient>
+              <filter id="pGlow1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+            <!-- Left half: organic fingerprint arcs -->
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 40 90 Q 50 60 70 55 Q 78 53 82 60"/>
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 32 100 Q 40 65 66 56 Q 80 52 86 62"/>
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 28 110 Q 34 72 62 60 Q 78 54 88 66"/>
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 26 120 Q 30 80 58 65 Q 76 57 88 72"/>
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 28 130 Q 32 92 56 74 Q 74 64 86 80"/>
+            <path class="p-stroke fp-line" stroke="url(#pGrad1a)" stroke-width="1.2" d="M 34 138 Q 38 104 56 86 Q 72 72 84 88"/>
+            <!-- Center divider -->
+            <line class="p-stroke" x1="90" y1="40" x2="90" y2="140" stroke="rgba(255,255,255,0.12)" stroke-width="0.8" stroke-dasharray="4 4"/>
+            <!-- Right half: circuit traces -->
+            <path class="p-stroke ct-line" stroke="url(#pGrad1b)" stroke-width="1.2" d="M 90 60 L 110 60 L 110 70 L 130 70"/>
+            <path class="p-stroke ct-line" stroke="url(#pGrad1b)" stroke-width="1.2" d="M 90 75 L 118 75 L 118 85 L 150 85"/>
+            <path class="p-stroke ct-line" stroke="url(#pGrad1b)" stroke-width="1.2" d="M 90 90 L 105 90 L 105 100 L 140 100 L 140 95"/>
+            <path class="p-stroke ct-line" stroke="url(#pGrad1b)" stroke-width="1.2" d="M 90 105 L 115 105 L 115 115 L 145 115"/>
+            <path class="p-stroke ct-line" stroke="url(#pGrad1b)" stroke-width="1.2" d="M 90 118 L 108 118 L 108 128 L 135 128"/>
+            <!-- Circuit dots -->
+            <circle class="ct-dot" cx="130" cy="70" r="2.5" fill="rgba(0,229,255,0.7)"/>
+            <circle class="ct-dot" cx="150" cy="85" r="2.5" fill="rgba(0,229,255,0.7)"/>
+            <circle class="ct-dot" cx="140" cy="100" r="2.5" fill="rgba(139,92,246,0.8)"/>
+            <circle class="ct-dot" cx="145" cy="115" r="2.5" fill="rgba(0,229,255,0.7)"/>
+            <circle class="ct-dot" cx="135" cy="128" r="2.5" fill="rgba(139,92,246,0.8)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Por Qué — REVERSED -->
+      <div class="glass-card pillar-card reverse rv rv-delay-1" id="pillar2">
+        <div class="spotlight"></div>
+        <div class="pillar-text">
+          <h3 class="pillar-h3">Por Qu&eacute; lo Hacemos</h3>
+          <p class="pillar-p">Nos enfocamos en empresas locales con un potencial de crecimiento real que compiten contra los l&iacute;deres de su sector. Nuestro prop&oacute;sito es claro: darles la identidad digital que necesitan para crecer, competir y convertirse en referentes. No trabajamos con cualquier negocio &mdash; elegimos proyectos donde podemos maximizar el impacto y transformar las ventas de forma tangible.</p>
+        </div>
+        <div class="pillar-svg-area">
+          <!-- Building → Skyscraper SVG -->
+          <svg class="pillar-svg" id="svg-building" width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.9"/>
+              </linearGradient>
+              <filter id="pGlow2">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+            <!-- Small building (left) -->
+            <rect class="p-stroke bld-small" x="18" y="110" width="36" height="55" stroke="url(#pGrad2)" stroke-width="1.3"/>
+            <!-- Windows small building -->
+            <rect class="p-stroke bld-small" x="24" y="118" width="8" height="8" stroke="rgba(0,229,255,0.5)" stroke-width="0.9"/>
+            <rect class="p-stroke bld-small" x="38" y="118" width="8" height="8" stroke="rgba(0,229,255,0.5)" stroke-width="0.9"/>
+            <rect class="p-stroke bld-small" x="24" y="132" width="8" height="8" stroke="rgba(0,229,255,0.5)" stroke-width="0.9"/>
+            <rect class="p-stroke bld-small" x="38" y="132" width="8" height="8" stroke="rgba(0,229,255,0.5)" stroke-width="0.9"/>
+            <!-- Door small -->
+            <rect class="p-stroke bld-small" x="29" y="150" width="14" height="15" stroke="rgba(0,229,255,0.4)" stroke-width="0.9"/>
+            <!-- Arrow -->
+            <path class="p-stroke bld-arrow" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" d="M 62 130 L 82 130"/>
+            <path class="p-stroke bld-arrow" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" d="M 76 124 L 82 130 L 76 136"/>
+            <!-- Tall skyscraper (right) -->
+            <rect class="p-stroke sky-body" x="100" y="45" width="52" height="120" stroke="url(#pGrad2)" stroke-width="1.3"/>
+            <!-- Skyscraper windows rows -->
+            <rect class="p-stroke sky-win" x="107" y="55" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="121" y="55" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="135" y="55" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="107" y="69" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="121" y="69" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="135" y="69" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="107" y="83" width="8" height="7" stroke="rgba(139,92,246,0.6)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="121" y="83" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="135" y="83" width="8" height="7" stroke="rgba(139,92,246,0.6)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="107" y="97" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="121" y="97" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <rect class="p-stroke sky-win" x="135" y="97" width="8" height="7" stroke="rgba(0,229,255,0.5)" stroke-width="0.8"/>
+            <!-- Door skyscraper -->
+            <rect class="p-stroke sky-win" x="118" y="148" width="16" height="17" stroke="rgba(0,229,255,0.4)" stroke-width="0.9"/>
+            <!-- Crown / star on top -->
+            <path class="p-stroke sky-crown" stroke="url(#pGrad2)" stroke-width="1.5" d="M 126 45 L 126 28"/>
+            <path class="p-stroke sky-crown" stroke="rgba(0,229,255,0.8)" stroke-width="1.2" d="M 118 34 L 126 22 L 134 34"/>
+            <circle class="sky-star" cx="126" cy="20" r="3.5" fill="rgba(0,229,255,0.9)" filter="url(#pGlow2)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Pillar 3: Cómo -->
+      <div class="glass-card pillar-card rv rv-delay-2" id="pillar3">
+        <div class="spotlight"></div>
+        <div class="pillar-text">
+          <h3 class="pillar-h3">C&oacute;mo lo Hacemos</h3>
+          <p class="pillar-p">Utilizamos software de inteligencia artificial para analizar y optimizar cada l&iacute;nea de c&oacute;digo en funci&oacute;n de c&oacute;mo los motores de b&uacute;squeda procesan el tr&aacute;fico web. Dentro del c&oacute;digo, optimizamos cada detalle para que tu marca sea visible, relevante e imposible de ignorar. El resultado: una presencia digital s&oacute;lida que atrae visitas y las transforma en clientes.</p>
+        </div>
+        <div class="pillar-svg-area">
+          <!-- Magnifying glass over code SVG -->
+          <svg class="pillar-svg" id="svg-magnify" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="pGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+              </linearGradient>
+              <clipPath id="lensClip">
+                <circle cx="88" cy="82" r="42"/>
+              </clipPath>
+              <filter id="pGlow3">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+              <filter id="lensFlare">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+            <!-- Background code lines (outside glass, dimmer) -->
+            <line class="p-stroke" x1="30" y1="145" x2="150" y2="145" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+            <line class="p-stroke" x1="30" y1="155" x2="120" y2="155" stroke="rgba(255,255,255,0.10)" stroke-width="1.2"/>
+            <line class="p-stroke" x1="30" y1="165" x2="140" y2="165" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
+            <!-- Code lines inside glass area (clipped, brighter) -->
+            <g clip-path="url(#lensClip)">
+              <rect x="46" y="46" width="84" height="72" fill="rgba(0,10,20,0.5)" rx="4"/>
+              <line class="p-stroke mg-code" x1="52" y1="60" x2="126" y2="60" stroke="rgba(255,255,255,0.35)" stroke-width="1.3"/>
+              <!-- Highlighted line 1 -->
+              <rect x="52" y="66" width="55" height="8" fill="rgba(0,229,255,0.12)" rx="2"/>
+              <line class="p-stroke mg-hl" x1="52" y1="70" x2="107" y2="70" stroke="rgba(0,229,255,0.75)" stroke-width="1.5"/>
+              <line class="p-stroke mg-code" x1="52" y1="80" x2="118" y2="80" stroke="rgba(255,255,255,0.25)" stroke-width="1.3"/>
+              <!-- Highlighted line 2 -->
+              <rect x="52" y="86" width="42" height="8" fill="rgba(139,92,246,0.15)" rx="2"/>
+              <line class="p-stroke mg-hl" x1="52" y1="90" x2="94" y2="90" stroke="rgba(139,92,246,0.75)" stroke-width="1.5"/>
+              <line class="p-stroke mg-code" x1="52" y1="100" x2="110" y2="100" stroke="rgba(255,255,255,0.20)" stroke-width="1.3"/>
+              <line class="p-stroke mg-code" x1="52" y1="110" x2="100" y2="110" stroke="rgba(255,255,255,0.15)" stroke-width="1.3"/>
+            </g>
+            <!-- Magnifying glass circle -->
+            <circle class="p-stroke mg-glass" cx="88" cy="82" r="42" stroke="url(#pGrad3)" stroke-width="1.8"/>
+            <!-- Glass lens flare dot -->
+            <circle class="mg-flare" cx="108" cy="62" r="4" fill="rgba(0,229,255,0.55)" filter="url(#lensFlare)"/>
+            <!-- Handle -->
+            <line class="p-stroke mg-handle" x1="120" y1="114" x2="148" y2="142" stroke="url(#pGrad3)" stroke-width="2.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section rv" style="margin-top:120px">
+    <h2 class="cta-h2">&iquest;Listo para Empezar?</h2>
+    <p class="cta-sub">Tu pr&oacute;ximo paso hacia la transformaci&oacute;n digital est&aacute; aqu&iacute;.</p>
+    <div class="cta-pair">
+      <div class="btn-glow-outer">
+        <a href="contacto.html" class="btn-glow-inner">
+          <span class="btn-glow-text">Empieza Tu Proyecto</span>
+        </a>
+      </div>
+      <a href="servicios.html" class="btn-text-link">Explora los Servicios</a>
+    </div>
+  </div>
+
+  <!-- TOOLS CAROUSEL -->
+  <div class="tc-wrap">
+    <div class="tc-outer">
+      <div class="tc-track">
+        <div class="tc-slot"><img src="LOGOS BRANDS/claude-3.svg" alt="Claude"></div>
+        <div class="tc-slot"><img src="LOGOS BRANDS/google-ads-2.svg" alt="Google Ads"></div>
+        <div class="tc-slot"><img src="LOGOS BRANDS/hotjar-2.svg" alt="Hotjar"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VERCEL.bgr.png" alt="Vercel"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/React.bgr.png" alt="React"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/FIGMA.bgr.png" alt="Figma"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/GITHUB.bgr.png" alt="GitHub"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/NOTION.bgr.png" alt="Notion"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/CANVA.bgr.png" alt="Canva"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VS code.bgr.png" alt="VS Code"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="tc-slot"><img src="LOGOS BRANDS/claude-3.svg" alt="Claude"></div>
+        <div class="tc-slot"><img src="LOGOS BRANDS/google-ads-2.svg" alt="Google Ads"></div>
+        <div class="tc-slot"><img src="LOGOS BRANDS/hotjar-2.svg" alt="Hotjar"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VERCEL.bgr.png" alt="Vercel"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/React.bgr.png" alt="React"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/FIGMA.bgr.png" alt="Figma"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/GITHUB.bgr.png" alt="GitHub"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/NOTION.bgr.png" alt="Notion"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/CANVA.bgr.png" alt="Canva"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VS code.bgr.png" alt="VS Code"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <div class="footer-inner">
+      <div class="footer-evimes-wm" aria-hidden="true">EVIMES</div>
+      <div class="footer-heading" id="footer-heading">
+        <h2 class="footer-h2">Nuestra Esencia</h2>
+        <p class="footer-desc">No creamos contenido; provocamos la reacci&oacute;n que tu marca necesita.</p>
+      </div>
+      <div class="cta-pair" style="justify-content:center;margin:40px 0 50px">
+        <div class="btn-glow-outer">
+          <a href="contacto.html" class="btn-glow-inner">
+            <span class="btn-glow-text">Empieza Tu Proyecto</span>
+          </a>
+        </div>
+        <a href="servicios.html" class="btn-text-link">Explora los Servicios</a>
+      </div>
+      <div class="footer-cols" id="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">Navegaci&oacute;n</div>
+          <nav class="footer-nav-links">
+            <a href="index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Legal</div>
+          <nav class="footer-legal-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-copy-bar">
+        <span class="footer-copy">&copy; 2026 Evimes. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+<script>
+// LOADER
+(function(){
+  const loader=document.getElementById('loader');
+  const bar=document.getElementById('loaderBar');
+  if(!loader||!bar)return;
+  document.body.classList.add('loading');
+  setTimeout(()=>{
+    const start=performance.now(),dur=700;
+    function tick(now){
+      const pct=Math.min(100,((now-start)/dur)*100);
+      bar.style.width=pct+'%';
+      if(pct<100){requestAnimationFrame(tick);}else{setTimeout(dismiss,500);}
+    }
+    requestAnimationFrame(tick);
+  },300);
+  function dismiss(){
+    const wrap=document.querySelector('.loader-logo-wrap');
+    if(wrap){
+      wrap.style.transition='transform 0.6s cubic-bezier(0.16,1,0.3,1),opacity 0.5s ease';
+      wrap.style.transform='scale(0.94)';
+      wrap.style.opacity='0';
+    }
+    setTimeout(()=>{
+      loader.classList.add('hidden');
+      document.body.classList.remove('loading');
+      document.getElementById('page').classList.add('visible');
+      initRv();
+    },350);
+  }
+  setTimeout(()=>{if(!loader.classList.contains('hidden'))dismiss();},4000);
+})();
+
+// SCROLL REVEALS
+function initRv(){
+  const els=document.querySelectorAll('.rv');
+  const ob=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('vis'),i*80);
+        ob.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -60px 0px'});
+  els.forEach(e=>ob.observe(e));
+}
+
+// SPOTLIGHT on cards
+(function(){
+  const cards=document.querySelectorAll('.glass-card');
+  cards.forEach(card=>{
+    const spot=card.querySelector('.spotlight');
+    if(!spot)return;
+    card.addEventListener('mousemove',function(e){
+      const r=card.getBoundingClientRect();
+      spot.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+      spot.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+    },{passive:true});
+    card.addEventListener('mouseleave',function(){
+      spot.style.setProperty('--mx','50%');
+      spot.style.setProperty('--my','50%');
+    },{passive:true});
+  });
+})();
+
+// FOOTER REVEAL
+(function(){
+  const heading=document.getElementById('footer-heading');
+  const cols=document.getElementById('footer-cols');
+  if(!heading&&!cols)return;
+  const ob=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        if(e.target===heading)heading.classList.add('vis');
+        if(e.target===cols)cols.classList.add('vis');
+        ob.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1});
+  if(heading)ob.observe(heading);
+  if(cols)ob.observe(cols);
+})();
+
+// NAVBAR
+(function(){
+  const nav=document.getElementById('navbar-capsule');
+  if(!nav)return;
+  const pill=document.createElement('div');
+  pill.style.cssText='position:absolute;border-radius:50px;background:rgba(255,255,255,0.06);pointer-events:none;top:6px;height:calc(100% - 12px);left:0;width:0;opacity:0;z-index:0;transition:left .25s ease-out,width .25s ease-out,opacity .2s ease-out';
+  nav.style.position='relative';
+  nav.insertBefore(pill,nav.firstChild);
+  const links=Array.from(nav.querySelectorAll('.nav-link'));
+  function movePill(el,show){
+    pill.style.left=el.offsetLeft+'px';
+    pill.style.width=el.offsetWidth+'px';
+    pill.style.opacity=show?'1':'0';
+  }
+  links.forEach(link=>{
+    link.addEventListener('mouseenter',function(){
+      if(!link.classList.contains('active'))movePill(link,true);
+      else pill.style.opacity='0';
+    });
+  });
+  nav.addEventListener('mouseleave',function(){pill.style.opacity='0';});
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>100);}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+
+// SVG DRAW-ON-HOVER for pillar cards
+(function(){
+  function initSvgDraw(cardId,lineSelectors,glowSelectors){
+    const card=document.getElementById(cardId);
+    if(!card)return;
+    const lines=[];
+    lineSelectors.forEach(sel=>{
+      card.querySelectorAll(sel).forEach(el=>{
+        try{
+          const len=el.getTotalLength();
+          el.style.strokeDasharray=len;
+          el.style.strokeDashoffset=len;
+          el.style.transition='stroke-dashoffset 1.2s ease-out, opacity 0.5s ease-out';
+          el.style.opacity='0.3';
+          lines.push({el,len});
+        }catch(e){}
+      });
+    });
+    const glowEls=[];
+    if(glowSelectors){
+      glowSelectors.forEach(sel=>{
+        card.querySelectorAll(sel).forEach(el=>{
+          el.style.transition='opacity 0.6s ease-out, filter 0.6s ease-out';
+          el.style.opacity='0.4';
+          glowEls.push(el);
+        });
+      });
+    }
+    card.addEventListener('mouseenter',function(){
+      lines.forEach((item,i)=>{
+        setTimeout(()=>{
+          item.el.style.strokeDashoffset='0';
+          item.el.style.opacity='1';
+        },i*60);
+      });
+      glowEls.forEach(el=>{el.style.opacity='1';el.style.filter='brightness(1.4)';});
+    });
+    card.addEventListener('mouseleave',function(){
+      lines.forEach(item=>{
+        item.el.style.strokeDashoffset=item.len;
+        item.el.style.opacity='0.3';
+      });
+      glowEls.forEach(el=>{el.style.opacity='0.4';el.style.filter='none';});
+    });
+  }
+
+  // Pillar 1: fingerprint + circuit lines
+  initSvgDraw('pillar1',['.fp-line','.ct-line'],['.ct-dot']);
+  // Pillar 2: building + skyscraper
+  initSvgDraw('pillar2',['.bld-small','.bld-arrow','.sky-body','.sky-win','.sky-crown'],['.sky-star']);
+  // Pillar 3: magnifying glass + code
+  initSvgDraw('pillar3',['.mg-glass','.mg-handle','.mg-code','.mg-hl'],['.mg-flare']);
+})();
+
+// BEAMS BACKGROUND
+(function(){
+  const canvas=document.getElementById('beamsCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const BEAM_COUNT=20;
+  let beams=[],W=0,H=0;
+  function createBeam(index){
+    const column=index%3,spacing=W/3;
+    return{x:column*spacing+spacing/2+(Math.random()-0.5)*spacing*0.5,y:Math.random()*H,width:50+Math.random()*90,length:H*2.5,angle:-35+Math.random()*10,speed:1.8+Math.random()*2.8,opacity:0.18+Math.random()*0.22,hue:190+(index*70)/BEAM_COUNT,pulse:Math.random()*Math.PI*2,pulseSpeed:0.04+Math.random()*0.06};
+  }
+  function resetBeam(beam,index){
+    const column=index%3,spacing=W/3;
+    beam.y=H+100;beam.x=column*spacing+spacing/2+(Math.random()-0.5)*spacing*0.5;
+    beam.width=80+Math.random()*120;beam.speed=1.5+Math.random()*2.5;
+    beam.hue=190+(index*70)/BEAM_COUNT;beam.opacity=0.2+Math.random()*0.15;
+    return beam;
+  }
+  function resize(){
+    const dpr=window.devicePixelRatio||1;
+    W=window.innerWidth;H=window.innerHeight;
+    canvas.width=W*dpr;canvas.height=H*dpr;
+    canvas.style.width=W+'px';canvas.style.height=H+'px';
+    ctx.scale(dpr,dpr);
+    beams=Array.from({length:Math.round(BEAM_COUNT*1.5)},(_,i)=>createBeam(i));
+  }
+  function drawBeam(beam){
+    ctx.save();ctx.translate(beam.x,beam.y);ctx.rotate(beam.angle*Math.PI/180);
+    const pOpacity=beam.opacity*(0.8+Math.sin(beam.pulse)*0.2);
+    const grad=ctx.createLinearGradient(0,0,0,beam.length);
+    grad.addColorStop(0,`hsla(${beam.hue},85%,65%,0)`);
+    grad.addColorStop(0.1,`hsla(${beam.hue},85%,65%,${pOpacity*0.5})`);
+    grad.addColorStop(0.4,`hsla(${beam.hue},85%,65%,${pOpacity})`);
+    grad.addColorStop(0.6,`hsla(${beam.hue},85%,65%,${pOpacity})`);
+    grad.addColorStop(0.9,`hsla(${beam.hue},85%,65%,${pOpacity*0.5})`);
+    grad.addColorStop(1,`hsla(${beam.hue},85%,65%,0)`);
+    ctx.fillStyle=grad;ctx.fillRect(-beam.width/2,0,beam.width,beam.length);ctx.restore();
+  }
+  function animate(){
+    ctx.clearRect(0,0,W,H);ctx.filter='blur(15px)';
+    beams.forEach((beam,i)=>{
+      beam.y-=beam.speed;beam.pulse+=beam.pulseSpeed;
+      if(beam.y+beam.length<-100)resetBeam(beam,i);
+      drawBeam(beam);
+    });
+    requestAnimationFrame(animate);
+  }
+  window.addEventListener('resize',resize);
+  resize();animate();
+})();
+</script>
+</body>
+</html>
