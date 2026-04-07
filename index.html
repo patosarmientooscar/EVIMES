@@ -664,9 +664,12 @@
 <body>
 <canvas id="beamsCanvas" class="beams-bg"></canvas>
 
-<!-- LOADER — Video -->
+<!-- LOADER -->
 <div id="loader">
-  <video id="loader-video" src="assets/Laoding%20page/Untitled%20design%20(3).mp4" playsinline autoplay muted></video>
+  <div class="loader-inner">
+    <div class="loader-logo-wrap"><img src="assets/logo.png" class="loader-logo-img" alt="EVIMES"></div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  </div>
 </div>
 <!-- PAGE -->
 <div id="page">
@@ -685,7 +688,7 @@
       <span class="hero-line1">Tu Esencia</span>
       <span class="hero-line2">Digital</span>
     </div>
-    <img id="hero-logo" src="../Structure/Logos/nuevos buenos/GREY/EVIMES_LOGO.png" alt="EVIMES">
+    <img id="hero-logo" src="logo-grey.png" alt="EVIMES">
     <div class="cta-hero-wrap">
       <div class="cta-pair">
         <div class="btn-glow-outer">
@@ -703,27 +706,27 @@
     <div class="tc-outer">
       <div class="tc-track">
         <!-- Set 1 -->
-        <div class="tc-slot"><img src="LOGOS BRANDS/claude-3.svg" alt="Claude"></div>
-        <div class="tc-slot"><img src="LOGOS BRANDS/google-ads-2.svg" alt="Google Ads"></div>
-        <div class="tc-slot"><img src="LOGOS BRANDS/hotjar-2.svg" alt="Hotjar"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/claude-3.svg" alt="Claude"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/google-ads-2.svg" alt="Google Ads"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/hotjar-2.svg" alt="Hotjar"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/VERCEL.bgr.png" alt="Vercel"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/React.bgr.png" alt="React"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/FIGMA.bgr.png" alt="Figma"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/GITHUB.bgr.png" alt="GitHub"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/NOTION.bgr.png" alt="Notion"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/CANVA.bgr.png" alt="Canva"></div>
-        <div class="tc-slot"><img src="assets/carrusel.homepage/VS code.bgr.png" alt="VS Code"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VS-code.bgr.png" alt="VS Code"></div>
         <!-- Set 2 — exact duplicate for seamless -50% loop -->
-        <div class="tc-slot"><img src="LOGOS BRANDS/claude-3.svg" alt="Claude"></div>
-        <div class="tc-slot"><img src="LOGOS BRANDS/google-ads-2.svg" alt="Google Ads"></div>
-        <div class="tc-slot"><img src="LOGOS BRANDS/hotjar-2.svg" alt="Hotjar"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/claude-3.svg" alt="Claude"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/google-ads-2.svg" alt="Google Ads"></div>
+        <div class="tc-slot"><img src="LOGOS-BRANDS/hotjar-2.svg" alt="Hotjar"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/VERCEL.bgr.png" alt="Vercel"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/React.bgr.png" alt="React"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/FIGMA.bgr.png" alt="Figma"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/GITHUB.bgr.png" alt="GitHub"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/NOTION.bgr.png" alt="Notion"></div>
         <div class="tc-slot"><img src="assets/carrusel.homepage/CANVA.bgr.png" alt="Canva"></div>
-        <div class="tc-slot"><img src="assets/carrusel.homepage/VS code.bgr.png" alt="VS Code"></div>
+        <div class="tc-slot"><img src="assets/carrusel.homepage/VS-code.bgr.png" alt="VS Code"></div>
       </div>
     </div>
   </div>
@@ -895,7 +898,7 @@
         <div class="holo-glow"></div>
         <div class="card-glass"></div>
         <div class="card-noise"></div>
-        <img class="card-img" src="assets/Cards.png/crecimiento.bgr.png" alt="">
+        <img class="card-img" src="" alt="" style="display:none">
         <!-- Growth graph -->
         <svg class="growth-graph" viewBox="0 0 400 300" preserveAspectRatio="none">
           <defs>
@@ -961,7 +964,7 @@
             <div class="chaos-card" data-idx="0">
               <div class="caos-card-wrapper">
                 <div class="caos-card-inner">
-                  <img src="assets/Caos.seccion/Hero Seccion..1.png" alt="">
+                  <img src="assets/Caos.seccion/hero-seccion.png" alt="">
                 </div>
               </div>
             </div>
@@ -1127,40 +1130,29 @@
 </div>
 
 <script>
-// LOADER — Video (first visit only)
+// LOADER — progress bar
 (function(){
-  const loader=document.getElementById('loader');
-  const vid=document.getElementById('loader-video');
-  if(!loader)return;
-
-  function dismiss(){
-    sessionStorage.setItem('evimes_loaded','1');
-    loader.classList.add('hidden');
-    document.body.classList.remove('loading');
-    document.getElementById('page').classList.add('visible');
-    initRv();
-  }
-
-  // Skip loader on internal navigation (already visited)
-  if(sessionStorage.getItem('evimes_loaded')){
-    loader.style.display='none';
-    document.getElementById('page').classList.add('visible');
-    // initRv will be called after DOM is ready
-    document.addEventListener('DOMContentLoaded',initRv);
-    return;
-  }
-
+  var loader = document.getElementById('loader');
+  var bar = document.getElementById('loaderBar');
+  if(!loader || !bar) return;
   document.body.classList.add('loading');
-
-  if(vid){
-    vid.addEventListener('ended',dismiss);
-    vid.play().catch(()=>{}); // ensure play starts
-    // Safety fallback: if video never ends (format issue), dismiss after 8s
-    setTimeout(()=>{if(!sessionStorage.getItem('evimes_loaded'))dismiss();},8000);
-  } else {
-    // No video element — dismiss immediately
-    dismiss();
+  var start = null, duration = 1800;
+  function step(ts){
+    if(!start) start = ts;
+    var p = Math.min((ts - start) / duration, 1);
+    var eased = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
+    bar.style.width = (eased * 100) + '%';
+    if(p < 1){ requestAnimationFrame(step); }
+    else {
+      setTimeout(function(){
+        loader.classList.add('hidden');
+        document.body.classList.remove('loading');
+        document.getElementById('page').classList.add('visible');
+        initRv();
+      }, 200);
+    }
   }
+  requestAnimationFrame(step);
 })();
 
 
