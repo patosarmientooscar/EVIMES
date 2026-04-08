@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
@@ -233,7 +233,7 @@ body.loading{overflow:hidden}
 .beams-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;filter:blur(6px);opacity:1}
 #navbar-capsule{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;display:inline-flex;align-items:center;gap:0;padding:4px 6px;border-radius:50px;background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);transition:background .3s ease,box-shadow .3s ease;white-space:nowrap}
 #navbar-capsule.scrolled{background:rgba(255,255,255,0.08);box-shadow:0 4px 20px rgba(0,0,0,0.3)}
-.nav-link{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.8px;font-weight:400;text-transform:uppercase;text-decoration:none;padding:7px 18px;border-radius:50px;color:rgba(255,255,255,0.5);transition:color .3s ease-out,background .3s ease-out;cursor:pointer;position:relative;z-index:1}
+.nav-link{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.8px;font-weight:400;text-transform:uppercase;text-decoration:none;padding:7px 18px;border-radius:50px;color:#fff;transition:color .3s ease-out,background .3s ease-out;cursor:pointer;position:relative;z-index:1}
 .nav-link.active{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)}
 .nav-link:hover:not(.active){color:rgba(255,255,255,0.85)}
 @media(max-width:768px){#navbar-capsule{top:12px;padding:4px 6px}.nav-link{font-size:11px;letter-spacing:.5px;padding:8px 14px}}
@@ -241,14 +241,14 @@ body.loading{overflow:hidden}
 .hero-heading{text-align:center;display:flex;flex-direction:column;align-items:center;z-index:5;position:relative;pointer-events:none;user-select:none;gap:0;transform:translateY(-50px)}
 .hero-line1{font-family:'Libre Baskerville',serif;font-size:clamp(1rem,2.2vw,2rem);font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#ffffff;line-height:1.08;display:block}
 .hero-line2{font-family:'Libre Baskerville',serif;font-size:clamp(1rem,2.2vw,2rem);font-weight:700;letter-spacing:8px;text-transform:uppercase;color:#5bb8a9;line-height:1.08;display:block}
-.hero-corner{position:absolute;font-family:'Libre Baskerville',serif;font-size:18px;font-weight:400;letter-spacing:6px;text-transform:uppercase;color:rgba(255,255,255,0.6);z-index:5;pointer-events:none;user-select:none}
+.hero-corner{position:absolute;font-family:'Libre Baskerville',serif;font-size:18px;font-weight:400;letter-spacing:6px;text-transform:uppercase;color:#fff;z-index:5;pointer-events:none;user-select:none}
 .hero-corner-tl{top:88px;left:48px}
 .hero-corner-br{bottom:40px;right:48px;transform:rotate(180deg)}
 .hero-cta-wrap{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:20px;align-items:center}
 .btn-glow-outer{display:inline-block;padding:1px;border-radius:50px;background:linear-gradient(135deg,rgba(0,229,255,0.5),rgba(139,92,246,0.5));box-shadow:0 0 18px rgba(0,229,255,0.12)}
 .btn-glow-inner{display:inline-flex;align-items:center;gap:10px;padding:13px 32px;border-radius:50px;background:#04040a;text-decoration:none;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:.04em;color:#fff;transition:background .3s}
 .btn-glow-inner:hover{background:rgba(0,229,255,0.06)}
-.btn-text-link{font-family:'Inter',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .3s}
+.btn-text-link{font-family:'Inter',sans-serif;font-size:0.85rem;color:#fff;text-decoration:none;transition:color .3s}
 .btn-text-link::after{content:' →'}
 .btn-text-link:hover{color:rgba(255,255,255,0.9)}
 #main-footer{content-visibility:auto;contain-intrinsic-size:0 600px;margin-top:0;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1}
@@ -257,16 +257,16 @@ body.loading{overflow:hidden}
 .footer-heading{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}
 .footer-heading.vis{opacity:1;transform:translateY(0)}
 .footer-h2{font-family:'Libre Baskerville',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:16px;line-height:1.2;text-align:center}
-.footer-desc{font-family:'Inter',sans-serif;font-size:clamp(0.9rem,1.5vw,1.1rem);color:rgba(255,255,255,0.5);max-width:500px;line-height:1.6;margin-bottom:60px;text-align:center;margin-left:auto;margin-right:auto}
+.footer-desc{font-family:'Inter',sans-serif;font-size:clamp(0.9rem,1.5vw,1.1rem);color:#fff;max-width:500px;line-height:1.6;margin-bottom:60px;text-align:center;margin-left:auto;margin-right:auto}
 .footer-cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;opacity:0;transform:translateY(20px);transition:opacity .8s ease-out .2s,transform .8s ease-out .2s}
 .footer-cols.vis{opacity:1;transform:translateY(0)}
-.footer-col-title{font-family:'Inter',sans-serif;font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-bottom:16px}
+.footer-col-title{font-family:'Inter',sans-serif;font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.8);margin-bottom:16px}
 .footer-nav-links,.footer-legal-links{display:flex;flex-direction:column;gap:10px}
-.footer-nav-links a,.footer-legal-links a{font-family:'Inter',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .3s;cursor:pointer}
+.footer-nav-links a,.footer-legal-links a{font-family:'Inter',sans-serif;font-size:0.9rem;color:#fff;text-decoration:none;transition:color .3s;cursor:pointer}
 .footer-nav-links a:hover{color:#fff}
 .footer-legal-links a:hover{color:rgba(255,255,255,0.7)}
 .footer-copy-bar{margin-top:60px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);text-align:center}
-.footer-copy{font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.25)}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.75)}
 @media(max-width:768px){#main-footer{padding:80px 24px 40px}.footer-evimes-wm{display:none}.footer-cols{flex-direction:column;align-items:center;text-align:center}.footer-nav-links,.footer-legal-links{align-items:center}}
 </style>
 </head>
