@@ -419,6 +419,11 @@ body.loading{overflow:hidden}
             <input type="hidden" name="🌍 Idioma" id="intel-idioma">
             <input type="hidden" name="🔗 Procedencia" id="intel-procedencia">
             <input type="hidden" name="🕐 Hora de envío" id="intel-hora">
+            <!-- Social search links — click from email to find the lead -->
+            <input type="hidden" name="🔎 LinkedIn" id="intel-linkedin">
+            <input type="hidden" name="🔎 Google (nombre + LinkedIn)" id="intel-google">
+            <input type="hidden" name="🔎 Instagram" id="intel-instagram">
+            <input type="hidden" name="🔎 Empresa / Web (dominio email)" id="intel-empresa">
 
             <div class="cbc-form-stack">
 
@@ -790,18 +795,49 @@ function initRv(){
   document.getElementById('intel-hora').value          = hora;
   document.getElementById('intel-ubicacion').value     = 'Obteniendo...';
 
+  // ── Build social search URLs from name + city + email domain ──
+  function buildSearchLinks(nombre, apellido, ciudad, emailVal){
+    var fullName  = (nombre + ' ' + apellido).trim();
+    var query     = encodeURIComponent(fullName + (ciudad ? ' ' + ciudad : ''));
+    var nameOnly  = encodeURIComponent(fullName);
+
+    // LinkedIn people search
+    document.getElementById('intel-linkedin').value =
+      'https://www.linkedin.com/search/results/people/?keywords=' + query;
+
+    // Google: name + LinkedIn
+    document.getElementById('intel-google').value =
+      'https://www.google.com/search?q=' + encodeURIComponent('"' + fullName + '"') +
+      (ciudad ? '+' + encodeURIComponent(ciudad) : '') + '+LinkedIn';
+
+    // Instagram search (web)
+    document.getElementById('intel-instagram').value =
+      'https://www.google.com/search?q=' + encodeURIComponent('"' + fullName + '" site:instagram.com');
+
+    // Company from email domain (strip common providers)
+    var empresa = '';
+    if(emailVal){
+      var domain = emailVal.split('@')[1] || '';
+      var generic = /gmail|hotmail|outlook|yahoo|icloud|protonmail|live\.|me\.com/i;
+      if(domain && !generic.test(domain)){
+        empresa = 'https://www.google.com/search?q=' + encodeURIComponent(domain);
+      }
+    }
+    document.getElementById('intel-empresa').value = empresa || '(email de proveedor genérico — sin empresa detectada)';
+  }
+
   // ── IP Geolocation (async, free, no key needed) ──
   var geoReady = false;
+  var geoCity  = '';
   fetch('https://ipapi.co/json/', {cache:'no-cache'})
     .then(function(r){ return r.json(); })
     .then(function(d){
-      var city    = d.city    || '';
+      geoCity = d.city || '';
       var region  = d.region  || '';
       var country = d.country_name || '';
-      var loc = [city, region, country].filter(Boolean).join(', ');
+      var loc = [geoCity, region, country].filter(Boolean).join(', ');
       document.getElementById('intel-ubicacion').value = loc || 'No disponible';
       document.getElementById('intel-ip').value        = d.ip  || '';
-      // org includes ISP + any registered company name (e.g. "AS3352 Telefónica de España S.A.U.")
       document.getElementById('intel-org').value       = d.org || 'No disponible';
       geoReady = true;
     })
@@ -810,17 +846,26 @@ function initRv(){
       geoReady = true;
     });
 
-  // ── Submit handler — wait up to 2.5s for geo then submit ──
+  // ── Submit handler — wait for geo, then build links and submit ──
   form.addEventListener('submit', function(e){
-    if(geoReady) return; // geo already done — submit normally
     e.preventDefault();
+
+    var nombre   = (document.getElementById('cf-nombre')   || {}).value  || '';
+    var apellido = (document.getElementById('cf-apellido') || {}).value  || '';
+    var email    = (document.getElementById('cf-email')    || {}).value  || '';
+
+    function doSubmit(){
+      buildSearchLinks(nombre, apellido, geoCity, email);
+      form.submit();
+    }
+
+    if(geoReady){ doSubmit(); return; }
+
+    // Wait up to 2.5s for geo then submit regardless
     var waited = 0;
     var poll = setInterval(function(){
       waited += 100;
-      if(geoReady || waited >= 2500){
-        clearInterval(poll);
-        form.submit();
-      }
+      if(geoReady || waited >= 2500){ clearInterval(poll); doSubmit(); }
     }, 100);
   });
 })();
