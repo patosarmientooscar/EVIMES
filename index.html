@@ -1339,18 +1339,12 @@ function _updateSelectedWorkScroll(){
       card.style.setProperty('--y', y + 'px');
       card.style.setProperty('--bg-x', (x / rect.width * 100).toFixed(1) + '%');
       card.style.setProperty('--bg-y', (y / rect.height * 100).toFixed(1) + '%');
-      if(!mobile){
-        var rotX = (y - rect.height / 2) / 40;
-        var rotY = (rect.width  / 2 - x) / 40;
-        card.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(3) + 'deg) rotateY(' + rotY.toFixed(3) + 'deg)';
-      }
     }, {passive:true});
     card.addEventListener('mouseleave', function(){
       card.style.setProperty('--x', '50%');
       card.style.setProperty('--y', '50%');
       card.style.setProperty('--bg-x', '50%');
       card.style.setProperty('--bg-y', '50%');
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
     }, {passive:true});
   });
 })();
