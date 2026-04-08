@@ -628,37 +628,149 @@
 
   </style>
 
+<!-- GEO: Organization — entity anchor for AI engines -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Evimes",
-  "description": "Agencia de diseño web, desarrollo de software, inteligencia artificial y marketing digital en Madrid. Creamos ecosistemas digitales completos para negocios locales.",
+  "@type": "Organization",
+  "name": "EVIMES",
+  "alternateName": "Evimes Agencia Digital",
+  "description": "Agencia digital en Madrid especializada en diseño web, desarrollo de software con IA, SEO, AEO, SEM y marketing digital para negocios locales.",
   "url": "https://evimes.com",
-  "telephone": "",
+  "logo": {"@type":"ImageObject","url":"https://evimes.com/assets/logo.png","width":300,"height":100},
+  "image": "https://evimes.com/assets/logo.png",
+  "telephone": "+34636736167",
+  "email": "patosarmientooscar@gmail.com",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Av. Cardenal Herrera Oria 171",
     "addressLocality": "Madrid",
     "addressRegion": "Comunidad de Madrid",
+    "postalCode": "28034",
     "addressCountry": "ES"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "40.4168",
-    "longitude": "-3.7038"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Madrid"
-  },
-  "serviceType": [
-    "Diseño Web","Desarrollo Web","Diseño UX/UI","Product Design",
-    "Desarrollo de Software","Inteligencia Artificial","SEO","AEO","SEM",
-    "Marketing Digital","Google Ads","E-Commerce","Branding Digital"
+  "geo": {"@type":"GeoCoordinates","latitude":40.4168,"longitude":-3.7038},
+  "areaServed": [
+    {"@type":"Country","name":"Spain"},
+    {"@type":"Country","name":"Portugal"},
+    {"@type":"City","name":"Madrid"},
+    {"@type":"City","name":"Barcelona"},
+    {"@type":"City","name":"Lisboa"}
   ],
-  "priceRange": "$$",
+  "knowsAbout": ["Diseño Web","Desarrollo Web","SEO","AEO","SEM","Marketing Digital","Inteligencia Artificial","E-Commerce","UX/UI Design","Branding Digital"],
+  "foundingDate": "2024",
+  "numberOfEmployees": {"@type":"QuantitativeValue","value":5},
+  "priceRange": "€€",
+  "openingHoursSpecification": {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+  "sameAs": ["https://evimes.com/spain","https://evimes.com/portugal"]
+}
+</script>
+
+<!-- GEO: LocalBusiness — full NAP for local search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","ProfessionalService"],
+  "name": "EVIMES",
+  "description": "Agencia de diseño web, desarrollo de software con IA y marketing digital en Madrid. Creamos ecosistemas digitales completos para negocios locales en España y Portugal.",
+  "url": "https://evimes.com",
+  "telephone": "+34636736167",
+  "email": "patosarmientooscar@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Cardenal Herrera Oria 171",
+    "addressLocality": "Madrid",
+    "addressRegion": "Comunidad de Madrid",
+    "postalCode": "28034",
+    "addressCountry": "ES"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":40.4168,"longitude":-3.7038},
+  "serviceType": ["Diseño Web","Desarrollo Web","Diseño UX/UI","Product Design","Desarrollo de Software","Inteligencia Artificial","SEO","AEO","SEM","Marketing Digital","Google Ads","E-Commerce","Branding Digital"],
+  "priceRange": "€€",
   "openingHours": "Mo-Fr 09:00-18:00",
-  "sameAs": []
+  "areaServed": [{"@type":"Country","name":"Spain"},{"@type":"Country","name":"Portugal"}],
+  "sameAs": ["https://evimes.com/spain","https://evimes.com/portugal"]
+}
+</script>
+
+<!-- GEO: WebSite schema — enables sitelinks search box -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "EVIMES",
+  "url": "https://evimes.com",
+  "inLanguage": ["es","es-ES","pt-PT"],
+  "description": "Agencia digital en Madrid: diseño web, software con IA, SEO, AEO y marketing digital para negocios locales en España y Portugal.",
+  "publisher": {"@type":"Organization","name":"EVIMES","url":"https://evimes.com"},
+  "potentialAction": {"@type":"SearchAction","target":"https://evimes.com/?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+
+<!-- GEO + AEO: WebPage with Speakable — signals for AI answer engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "EVIMES | Agencia de Diseño Web y Marketing Digital en Madrid",
+  "description": "Evimes: agencia digital en Madrid especializada en diseño web, desarrollo de software con IA, SEO, AEO, SEM y estrategias de crecimiento para negocios locales.",
+  "url": "https://evimes.com",
+  "inLanguage": "es-ES",
+  "isPartOf": {"@type":"WebSite","url":"https://evimes.com"},
+  "about": {"@type":"Organization","name":"EVIMES","url":"https://evimes.com"},
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-line1",".hero-line2",".sv-hd-title",".sv-hd-sub"]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://evimes.com/"}]
+  }
+}
+</script>
+
+<!-- AEO: FAQPage — feeds AI answer engines (Google SGE, ChatGPT, Perplexity) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es EVIMES?",
+      "acceptedAnswer": {"@type":"Answer","text":"EVIMES es una agencia digital en Madrid especializada en diseño web profesional, desarrollo de software con inteligencia artificial, SEO, AEO, SEM y marketing digital. Creamos ecosistemas digitales completos para negocios locales en España y Portugal."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué servicios ofrece EVIMES?",
+      "acceptedAnswer": {"@type":"Answer","text":"EVIMES ofrece diseño web UX/UI, desarrollo de software a medida con IA, posicionamiento SEO y AEO, publicidad SEM y Google Ads, e-commerce y tiendas online, branding digital y marketing de crecimiento para negocios en España y Portugal."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es AEO y por qué es importante?",
+      "acceptedAnswer": {"@type":"Answer","text":"AEO (Answer Engine Optimization) es la optimización de contenido para que aparezca como respuesta directa en motores de búsqueda con IA como Google SGE, ChatGPT, Perplexity y Bing Copilot. Es fundamental porque cada vez más usuarios obtienen respuestas directas sin hacer clic. EVIMES implementa AEO mediante datos estructurados, FAQPage schema y contenido semántico optimizado."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicada la agencia EVIMES?",
+      "acceptedAnswer": {"@type":"Answer","text":"EVIMES está ubicada en Madrid, España (Av. Cardenal Herrera Oria 171, 28034). Trabajamos con clientes en toda España y Portugal de forma remota y presencial."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una página web profesional en Madrid?",
+      "acceptedAnswer": {"@type":"Answer","text":"El coste de una página web profesional en Madrid varía según la complejidad del proyecto. En EVIMES diseñamos propuestas personalizadas que incluyen diseño UX/UI, desarrollo responsive, optimización SEO y seguimiento de resultados. Contacta con nosotros para un presupuesto sin compromiso."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabaja EVIMES con clientes en Portugal?",
+      "acceptedAnswer": {"@type":"Answer","text":"Sí, EVIMES trabaja con clientes en Portugal ofreciendo diseño web, criação de sites, SEO y marketing digital. Damos servicio a Lisboa, Porto, Braga y toda Portugal de forma remota."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo se tarda en crear una página web?",
+      "acceptedAnswer": {"@type":"Answer","text":"El tiempo de desarrollo de una página web en EVIMES depende del alcance del proyecto. Un sitio web profesional suele completarse entre 3 y 8 semanas, incluyendo diseño, desarrollo, optimización SEO/AEO y pruebas finales."}
+    }
+  ]
 }
 </script>
 
