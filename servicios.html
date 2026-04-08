@@ -296,7 +296,7 @@ section{position:relative;z-index:1;display:flex;flex-direction:column;justify-c
 .cta-btn:hover{border-color:var(--cyan);background:var(--cyan10);gap:32px}
 
 /* FOOTER */
-#main-footer{margin-top:150px;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1}
+#main-footer{content-visibility:auto;contain-intrinsic-size:0 600px;margin-top:150px;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1}
 .footer-inner{max-width:1200px;margin:0 auto;position:relative;z-index:5}
 .footer-evimes-wm{display:block;text-align:center;font-family:'Libre Baskerville',serif;font-size:clamp(8rem,15vw,16rem);font-weight:700;letter-spacing:10px;color:transparent;background:linear-gradient(135deg,rgba(0,229,255,0.35) 0%,rgba(139,92,246,0.35) 50%,rgba(0,200,255,0.3) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px rgba(0,229,255,0.2);pointer-events:none;z-index:0;white-space:nowrap;line-height:1;user-select:none;margin-bottom:40px;overflow:hidden}
 .footer-heading{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out,transform .8s ease-out}
@@ -520,6 +520,7 @@ section{position:relative;z-index:1;display:flex;flex-direction:column;justify-c
 
 /* BIG STAGE IMAGE CAROUSEL */
 #img-carousel{
+  content-visibility:auto;contain-intrinsic-size:0 300px;
   position:relative;z-index:1;
   width:100vw;
   left:50%;
@@ -891,23 +892,23 @@ section{position:relative;z-index:1;display:flex;flex-direction:column;justify-c
       <div class="img-stage-row">
         <div class="img-track row-a" id="imgTrackA">
           <!-- Set A -->
-          <div class="img-card"><img src="assets/inspirations/Seiger.png" alt="Referencia 1"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #01</span></div>
-          <div class="img-card"><img src="assets/inspirations/laura.png" alt="Referencia 2"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #02</span></div>
-          <div class="img-card"><img src="assets/inspirations/tract.png" alt="Referencia 3"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #03</span></div>
-          <div class="img-card"><img src="assets/inspirations/mimoney.png" alt="Referencia 4"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #04</span></div>
-          <div class="img-card"><img src="assets/inspirations/joby.png" alt="Referencia 5"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #05</span></div>
-          <div class="img-card"><img src="assets/inspirations/vast.png" alt="Referencia 6"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #06</span></div>
-          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #07</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-01.png" alt="Referencia 8"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #08</span></div>
+          <div class="img-card"><img src="assets/inspirations/Seiger.png" alt="Referencia 1" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #01</span></div>
+          <div class="img-card"><img src="assets/inspirations/laura.png" alt="Referencia 2" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #02</span></div>
+          <div class="img-card"><img src="assets/inspirations/tract.png" alt="Referencia 3" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #03</span></div>
+          <div class="img-card"><img src="assets/inspirations/mimoney.png" alt="Referencia 4" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #04</span></div>
+          <div class="img-card"><img src="assets/inspirations/joby.png" alt="Referencia 5" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #05</span></div>
+          <div class="img-card"><img src="assets/inspirations/vast.png" alt="Referencia 6" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #06</span></div>
+          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #07</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-01.png" alt="Referencia 8" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #08</span></div>
           <!-- Set B — duplicate -->
-          <div class="img-card"><img src="assets/inspirations/Seiger.png" alt="Referencia 1"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #01</span></div>
-          <div class="img-card"><img src="assets/inspirations/laura.png" alt="Referencia 2"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #02</span></div>
-          <div class="img-card"><img src="assets/inspirations/tract.png" alt="Referencia 3"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #03</span></div>
-          <div class="img-card"><img src="assets/inspirations/mimoney.png" alt="Referencia 4"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #04</span></div>
-          <div class="img-card"><img src="assets/inspirations/joby.png" alt="Referencia 5"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #05</span></div>
-          <div class="img-card"><img src="assets/inspirations/vast.png" alt="Referencia 6"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #06</span></div>
-          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #07</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-01.png" alt="Referencia 8"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #08</span></div>
+          <div class="img-card"><img src="assets/inspirations/Seiger.png" alt="Referencia 1" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #01</span></div>
+          <div class="img-card"><img src="assets/inspirations/laura.png" alt="Referencia 2" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #02</span></div>
+          <div class="img-card"><img src="assets/inspirations/tract.png" alt="Referencia 3" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #03</span></div>
+          <div class="img-card"><img src="assets/inspirations/mimoney.png" alt="Referencia 4" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #04</span></div>
+          <div class="img-card"><img src="assets/inspirations/joby.png" alt="Referencia 5" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #05</span></div>
+          <div class="img-card"><img src="assets/inspirations/vast.png" alt="Referencia 6" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #06</span></div>
+          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #07</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-01.png" alt="Referencia 8" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #08</span></div>
         </div>
       </div>
 
@@ -915,23 +916,23 @@ section{position:relative;z-index:1;display:flex;flex-direction:column;justify-c
       <div class="img-stage-row">
         <div class="img-track row-b" id="imgTrackB">
           <!-- Set A -->
-          <div class="img-card"><img src="assets/inspirations/ref-05.png" alt="Referencia 9"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #09</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-07.png" alt="Referencia 10"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #10</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-02.png" alt="Referencia 11"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #11</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-03.png" alt="Referencia 12"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #12</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-04.png" alt="Referencia 13"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #13</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-06.png" alt="Referencia 14"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #14</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-08.png" alt="Referencia 15"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #15</span></div>
-          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #16</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-05.png" alt="Referencia 9" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #09</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-07.png" alt="Referencia 10" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #10</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-02.png" alt="Referencia 11" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #11</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-03.png" alt="Referencia 12" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #12</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-04.png" alt="Referencia 13" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #13</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-06.png" alt="Referencia 14" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #14</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-08.png" alt="Referencia 15" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #15</span></div>
+          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #16</span></div>
           <!-- Set B — duplicate -->
-          <div class="img-card"><img src="assets/inspirations/ref-05.png" alt="Referencia 9"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #09</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-07.png" alt="Referencia 10"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #10</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-02.png" alt="Referencia 11"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #11</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-03.png" alt="Referencia 12"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #12</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-04.png" alt="Referencia 13"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #13</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-06.png" alt="Referencia 14"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #14</span></div>
-          <div class="img-card"><img src="assets/inspirations/ref-08.png" alt="Referencia 15"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #15</span></div>
-          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #16</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-05.png" alt="Referencia 9" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #09</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-07.png" alt="Referencia 10" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #10</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-02.png" alt="Referencia 11" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #11</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-03.png" alt="Referencia 12" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #12</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-04.png" alt="Referencia 13" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #13</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-06.png" alt="Referencia 14" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #14</span></div>
+          <div class="img-card"><img src="assets/inspirations/ref-08.png" alt="Referencia 15" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #15</span></div>
+          <div class="img-card"><img src="assets/inspirations/notion.png" alt="Referencia 7" loading="lazy" decoding="async"><div class="img-card-overlay"></div><span class="img-card-label">Referencia #16</span></div>
         </div>
       </div>
 
@@ -1094,19 +1095,23 @@ function initRv(){
     ctx.restore();
   }
 
+  var _beamsHidden = false;
+  document.addEventListener('visibilitychange', function(){ _beamsHidden = document.hidden; });
+
   function animate(){
-    ctx.clearRect(0,0,W,H);
-    ctx.filter='blur(15px)';
-    beams.forEach((beam,i)=>{
-      beam.y-=beam.speed;
-      beam.pulse+=beam.pulseSpeed;
-      if(beam.y+beam.length<-100)resetBeam(beam,i);
-      drawBeam(beam);
-    });
+    if(!_beamsHidden){
+      ctx.clearRect(0,0,W,H);
+      beams.forEach((beam,i)=>{
+        beam.y-=beam.speed;
+        beam.pulse+=beam.pulseSpeed;
+        if(beam.y+beam.length<-100)resetBeam(beam,i);
+        drawBeam(beam);
+      });
+    }
     requestAnimationFrame(animate);
   }
 
-  window.addEventListener('resize',resize);
+  window.addEventListener('resize',resize,{passive:true});
   resize();
   animate();
 })();
@@ -1129,7 +1134,7 @@ function initRv(){
     clearTimeout(_svcResizeT);
     _svcResizeT = setTimeout(cacheRects, 150);
   });
-  window.addEventListener('scroll', cacheRects, {passive:true});
+  // scroll cacheRects removed — rects only need refresh on resize, not every scroll
 
   cards.forEach(function(card){
     card.addEventListener('mousemove', function(e){
@@ -1163,12 +1168,16 @@ function initRv(){
   io.observe(section);
 })();
 
-// CAROUSEL — spotlight tracking on scroll cards
+// CAROUSEL — spotlight tracking on scroll cards (cached rects)
 (function(){
   var cards = Array.from(document.querySelectorAll('.scroll-card'));
+  var rects = new Map();
+  function cacheScrollRects(){ cards.forEach(function(c){ rects.set(c, c.getBoundingClientRect()); }); }
+  cacheScrollRects();
+  var _rT; window.addEventListener('resize', function(){ clearTimeout(_rT); _rT = setTimeout(cacheScrollRects, 150); }, {passive:true});
   cards.forEach(function(card){
     card.addEventListener('mousemove', function(e){
-      var rect = card.getBoundingClientRect();
+      var rect = rects.get(card) || card.getBoundingClientRect();
       card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width  * 100) + '%');
       card.style.setProperty('--mouse-y', ((e.clientY - rect.top)  / rect.height * 100) + '%');
     }, {passive:true});

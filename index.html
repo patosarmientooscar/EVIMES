@@ -199,7 +199,7 @@
     .card-crecimiento:hover .crec-logos-wrap img{opacity:0.85}
     /* Crecimiento — growth graph */
     .growth-graph{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
-    .graph-dot{position:absolute;width:16px;height:16px;border-radius:50%;z-index:4;pointer-events:none;background:radial-gradient(circle,rgba(0,229,255,0.9) 0%,rgba(139,92,246,0.6) 60%,transparent 100%);box-shadow:0 0 12px rgba(0,229,255,0.4),0 0 24px rgba(139,92,246,0.2);opacity:0;transition:opacity .2s ease-out;will-change:transform,opacity}
+    .graph-dot{position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;z-index:4;pointer-events:none;background:radial-gradient(circle,rgba(0,229,255,0.9) 0%,rgba(139,92,246,0.6) 60%,transparent 100%);box-shadow:0 0 12px rgba(0,229,255,0.4),0 0 24px rgba(139,92,246,0.2);opacity:0;transition:opacity .2s ease-out;will-change:transform,opacity}
     /* Software/AI card — bottom image panel */
     .card-software .card-content{display:flex;flex-direction:column;justify-content:flex-start;padding-bottom:40%}
     .card-software .bc-pills{margin-top:auto;margin-bottom:auto}
@@ -231,7 +231,6 @@
     /* Cards — directional slide-in with premium snap easing */
     .bento-reveal{
       opacity:0;
-      will-change:opacity,transform;
       transition:
         opacity  .75s cubic-bezier(0.25,1,0.5,1),
         transform .75s cubic-bezier(0.25,1,0.5,1);
@@ -288,7 +287,6 @@
       border-radius:18px;
       padding:36px 32px 32px;
       display:flex;flex-direction:column;gap:18px;
-      will-change:transform;
       contain:layout paint;
       box-shadow:
         inset 0px 1px 0px rgba(255,255,255,0.07),
@@ -375,7 +373,6 @@
       padding:6px 14px;
       white-space:nowrap;
       cursor:pointer;
-      will-change:translate;
       /* Layered inset shadows give the pill a subtle 3D lozenge feel */
       box-shadow:
         inset 0px 1px 1px rgba(255,255,255,0.20),
@@ -486,7 +483,7 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* FOOTER */
-    #main-footer{margin-top:150px;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1}
+    #main-footer{margin-top:150px;border-top:1px solid rgba(255,255,255,0.06);padding:100px 40px 40px;position:relative;overflow:hidden;z-index:1;content-visibility:auto;contain-intrinsic-size:0 600px}
     .footer-inner{max-width:1200px;margin:0 auto;position:relative;z-index:5}
     /* Watermark elements */
     .footer-evimes-wm{display:block;text-align:center;font-family:'Libre Baskerville',serif;font-size:clamp(8rem,15vw,16rem);font-weight:700;letter-spacing:10px;color:transparent;background:linear-gradient(135deg,rgba(0,229,255,0.35) 0%,rgba(139,92,246,0.35) 50%,rgba(0,200,255,0.3) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px rgba(0,229,255,0.2);pointer-events:none;z-index:0;white-space:nowrap;line-height:1;user-select:none;margin-bottom:40px;overflow:hidden}
@@ -532,14 +529,14 @@
     }
 
     /* TIMELINE */
-    #timeline-section{position:relative;z-index:1;margin-top:240px;padding:0 0 80px}
+    #timeline-section{position:relative;z-index:1;margin-top:240px;padding:0 0 80px;content-visibility:auto;contain-intrinsic-size:0 900px}
     .tl-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1100px;margin:0 auto;padding:0 60px;align-items:start}
     .tl-left{position:sticky;top:30vh;align-self:start}
     .tl-h1{font-family:'Libre Baskerville',serif;font-size:clamp(32px,4vw,56px);font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-.03em;display:block}
     .tl-h2{font-family:'Libre Baskerville',serif;font-size:clamp(32px,4vw,56px);font-weight:700;color:#00e5ff;line-height:1.06;letter-spacing:-.03em;display:block;margin-top:4px}
     .tl-right{position:relative;padding-left:44px}
     .tl-line-track{position:absolute;left:0;top:0;width:1px;height:100%;background:rgba(255,255,255,0.1)}
-    .tl-line-fill{position:absolute;left:0;top:0;width:1px;height:0%;background:#00e5ff;box-shadow:0 0 8px rgba(0,229,255,0.6);transition:height .06s linear;will-change:height}
+    .tl-line-fill{position:absolute;left:0;top:0;width:1px;height:100%;background:#00e5ff;box-shadow:0 0 8px rgba(0,229,255,0.6);transition:transform .06s linear;will-change:transform;transform:scaleY(0);transform-origin:0 0}
     .tl-step{position:relative;margin-bottom:200px;opacity:0;transform:translateX(30px);transition:opacity .7s ease-out,transform .7s ease-out;will-change:opacity,transform}
     .tl-step:last-child{margin-bottom:0;padding-bottom:60px}
     .tl-step.vis{opacity:1;transform:translateX(0)}
@@ -580,7 +577,7 @@
     }
 
     /* CLARIDAD EN EL CAOS */
-    #chaos-section{position:relative;z-index:1;margin-top:240px;padding:0 40px 80px;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+    #chaos-section{position:relative;z-index:1;margin-top:240px;padding:0 40px 80px;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;content-visibility:auto;contain-intrinsic-size:0 800px}
     .chaos-inner{width:100%;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;position:relative;z-index:10}
     /* Two-column layout */
     .chaos-cols{width:100%;display:flex;align-items:center;position:relative;z-index:10;opacity:0;transform:translateY(30px);transition:opacity .8s ease-out,transform .8s ease-out}
@@ -681,14 +678,14 @@
 
   <section id="hero">
     <!-- EVIMES logo — left side, vertically centered with heading -->
-    <a id="side-logo" href="index.html" style="position:fixed;top:50%;left:30px;transform:translateY(-50%) rotate(-90deg);transform-origin:center center;z-index:9999;display:flex;align-items:center;cursor:pointer;opacity:0.85;transition:opacity .3s ease;text-decoration:none" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">
+    <a id="side-logo" href="index.html" style="position:fixed;top:0;left:30px;transform:rotate(-90deg);transform-origin:center center;z-index:9999;display:flex;align-items:center;cursor:pointer;opacity:0.85;transition:opacity .3s ease;text-decoration:none" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.85'">
       <img src="assets/logo-nav.png" alt="EVIMES" style="height:160px;width:auto;filter:brightness(0) invert(1)">
     </a>
     <div class="hero-heading" id="hero-text">
       <span class="hero-line1">Tu Esencia</span>
       <span class="hero-line2">Digital</span>
     </div>
-    <img id="hero-logo" src="logo-grey.png" alt="EVIMES">
+    <img id="hero-logo" src="assets/logo.png" alt="EVIMES">
     <div class="cta-hero-wrap">
       <div class="cta-pair">
         <div class="btn-glow-outer">
@@ -924,19 +921,19 @@
         <div class="crec-logos-col">
           <div class="crec-logos-wrap">
             <!-- First set -->
-            <img src="assets/Cards.png/Crecimiento/3.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/4.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/5.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/6.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/7.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/8.png" alt="">
+            <img src="assets/Cards.png/Crecimiento/3.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/4.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/5.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/6.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/7.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/8.png" alt="" loading="lazy" decoding="async">
             <!-- Duplicate set for seamless loop -->
-            <img src="assets/Cards.png/Crecimiento/3.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/4.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/5.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/6.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/7.png" alt="">
-            <img src="assets/Cards.png/Crecimiento/8.png" alt="">
+            <img src="assets/Cards.png/Crecimiento/3.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/4.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/5.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/6.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/7.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/Cards.png/Crecimiento/8.png" alt="" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="card-content">
@@ -964,21 +961,21 @@
             <div class="chaos-card" data-idx="0">
               <div class="caos-card-wrapper">
                 <div class="caos-card-inner">
-                  <img src="assets/Caos.seccion/hero-seccion.png" alt="">
+                  <img src="assets/Caos.seccion/hero-seccion.png" alt="" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
             <div class="chaos-card" data-idx="1">
               <div class="caos-card-wrapper">
                 <div class="caos-card-inner">
-                  <img src="assets/Caos.seccion/Dark-Color-Palette-28-1024x1024.webp" alt="">
+                  <img src="assets/Caos.seccion/Dark-Color-Palette-28-1024x1024.webp" alt="" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
             <div class="chaos-card" data-idx="2">
               <div class="caos-card-wrapper">
                 <div class="caos-card-inner">
-                  <img src="assets/Caos.seccion/Claude-md-guide-1024x572.jpg" alt="">
+                  <img src="assets/Caos.seccion/Claude-md-guide-1024x572.jpg" alt="" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
@@ -1331,7 +1328,7 @@ function _updateSelectedWorkScroll(){
     clearTimeout(_resizeTimer);
     _resizeTimer = setTimeout(cacheRects, 150);
   });
-  window.addEventListener('scroll', cacheRects, {passive:true});
+  // scroll cacheRects removed — rects only need refresh on resize, not every scroll
 
   cards.forEach(function(card){
     card.addEventListener('mousemove', function(e){
@@ -1503,7 +1500,6 @@ var _sLogo = document.getElementById('side-logo');
 var _sLogoCurrentY = window.innerHeight / 2;
 var _sLogoTargetY  = window.innerHeight / 2;
 if(_sLogo){
-  _sLogo.style.transform = 'translateY(-50%) rotate(-90deg)';
   document.addEventListener('mousemove', function(e){ _sLogoTargetY = e.clientY; }, {passive:true});
 }
 
@@ -1511,18 +1507,17 @@ if(_sLogo){
 (function masterLoop(){
   // 1. Selected work parallax
   _updateSelectedWorkScroll();
-  // 2. Side logo vertical tracking
+  // 2. Side logo vertical tracking (transform only — no layout-read style.top)
   if(_sLogo){
     _sLogoCurrentY += (_sLogoTargetY - _sLogoCurrentY) * 0.05;
-    _sLogo.style.top = _sLogoCurrentY.toFixed(2) + 'px';
+    _sLogo.style.transform = 'translateY(' + _sLogoCurrentY.toFixed(2) + 'px) rotate(-90deg)';
   }
-  // 3. Graph dot lerp (position driven by mousemove target, smoothed here)
+  // 3. Graph dot lerp (transform only — no layout-triggering left/top)
   if(_graphDot){
     if(_graphDotVisible){
       _graphDotCurrX += (_graphDotTargX - _graphDotCurrX) * 0.18;
       _graphDotCurrY += (_graphDotTargY - _graphDotCurrY) * 0.18;
-      _graphDot.style.left    = _graphDotCurrX.toFixed(2) + 'px';
-      _graphDot.style.top     = _graphDotCurrY.toFixed(2) + 'px';
+      _graphDot.style.transform = 'translate(' + _graphDotCurrX.toFixed(2) + 'px,' + _graphDotCurrY.toFixed(2) + 'px)';
       _graphDot.style.opacity = '1';
     } else {
       _graphDot.style.opacity = '0';
@@ -1701,7 +1696,7 @@ if(_sLogo){
     const total  = rRect.height - window.innerHeight * 0.5;
     const scrolled = -rRect.top + window.innerHeight * 0.35;
     const pct    = Math.max(0, Math.min(100, (scrolled / total) * 100));
-    fill.style.height = pct + '%';
+    fill.style.transform = 'scaleY(' + (pct / 100).toFixed(4) + ')';
   }
 
   window.addEventListener('scroll', updateFill, {passive:true});
@@ -1801,19 +1796,23 @@ function initCt(){const els=document.querySelectorAll('.stn[data-count]');const 
     ctx.restore();
   }
 
+  var _beamsHidden = false;
+  document.addEventListener('visibilitychange', function(){ _beamsHidden = document.hidden; });
+
   function animate(){
-    ctx.clearRect(0,0,W,H);
-    ctx.filter='blur(15px)';
-    beams.forEach((beam,i)=>{
-      beam.y-=beam.speed;
-      beam.pulse+=beam.pulseSpeed;
-      if(beam.y+beam.length<-100)resetBeam(beam,i);
-      drawBeam(beam);
-    });
+    if(!_beamsHidden){
+      ctx.clearRect(0,0,W,H);
+      beams.forEach((beam,i)=>{
+        beam.y-=beam.speed;
+        beam.pulse+=beam.pulseSpeed;
+        if(beam.y+beam.length<-100)resetBeam(beam,i);
+        drawBeam(beam);
+      });
+    }
     requestAnimationFrame(animate);
   }
 
-  window.addEventListener('resize',resize);
+  window.addEventListener('resize',resize,{passive:true});
   resize();
   animate();
 })();
