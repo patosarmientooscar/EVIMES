@@ -60,16 +60,14 @@
     a,button,.btn-primary,.cb,.bp,.bc,[role="button"],[onclick],input[type="submit"]{cursor:pointer!important}
 
     /* LOADER */
-    #loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.9s ease,visibility 0.9s ease}
+    #loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease,visibility 0.8s ease}
     #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
     body.loading{overflow:hidden}
-    .loader-inner{display:flex;flex-direction:column;align-items:center;gap:52px}
-    .loader-logo-wrap{width:260px;display:flex;justify-content:center}
-    .loader-logo-img{width:160px;height:auto;display:block;opacity:0;animation:ldrLogoIn 1.0s cubic-bezier(0.4,0,0.2,1) 0.3s forwards}
-    @keyframes ldrLogoIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
-    .loader-bar-wrap{width:100px;height:1px;background:rgba(255,255,255,0.1);overflow:hidden;opacity:0;animation:ldrFadeIn 0.4s ease 1.0s forwards}
-    .loader-bar{height:100%;width:0%;background:#fff;transition:width 0.1s linear}
-    @keyframes ldrFadeIn{to{opacity:1}}
+    .loader-inner{display:flex;flex-direction:column;align-items:center;gap:28px}
+    #loaderVideo{width:min(440px,85vw);height:auto;display:block}
+    .loader-bar-wrap{width:min(300px,65vw);height:2px;background:rgba(255,255,255,0.1);overflow:hidden;border-radius:2px;opacity:0;animation:ldrBarIn 0.5s ease 0.4s forwards}
+    @keyframes ldrBarIn{to{opacity:1}}
+    .loader-bar{height:100%;width:0%;background:linear-gradient(90deg,#00e5ff,#8b5cf6);border-radius:2px;transition:width 0.12s linear}
 
     /* PAGE */
     #page{opacity:0;transition:opacity 1.2s cubic-bezier(.25,.1,.25,1)}
@@ -781,7 +779,7 @@
 <!-- LOADER -->
 <div id="loader">
   <div class="loader-inner">
-    <div class="loader-logo-wrap"><img src="assets/logo.png" class="loader-logo-img" alt="EVIMES"></div>
+    <video id="loaderVideo" src="assets/loadingpage/Logo_Animation_For_Website_Loading.mp4" autoplay muted playsinline preload="auto"></video>
     <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
   </div>
 </div>
@@ -1248,26 +1246,76 @@
 // LOADER — progress bar
 (function(){
   var loader = document.getElementById('loader');
-  var bar = document.getElementById('loaderBar');
-  if(!loader || !bar) return;
-  document.body.classList.add('loading');
-  var start = null, duration = 1800;
-  function step(ts){
-    if(!start) start = ts;
-    var p = Math.min((ts - start) / duration, 1);
-    var eased = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
-    bar.style.width = (eased * 100) + '%';
-    if(p < 1){ requestAnimationFrame(step); }
-    else {
-      setTimeout(function(){
-        loader.classList.add('hidden');
-        document.body.classList.remove('loading');
-        document.getElementById('page').classList.add('visible');
-        initRv();
-      }, 200);
-    }
+  var bar    = document.getElementById('loaderBar');
+  var video  = document.getElementById('loaderVideo');
+  if(!loader) return;
+
+  // ── Skip on in-session navigation ──
+  if(sessionStorage.getItem('ev_visited')){
+    loader.style.transition = 'none';
+    loader.classList.add('hidden');
+    document.body.classList.remove('loading');
+    setTimeout(function(){
+      var pg = document.getElementById('page');
+      if(pg) pg.classList.add('visible');
+      if(typeof initRv === 'function') initRv();
+    }, 50);
+    return;
   }
-  requestAnimationFrame(step);
+
+  document.body.classList.add('loading');
+
+  var pageReady  = document.readyState === 'complete';
+  var videoEnded = false;
+
+  if(!pageReady){
+    window.addEventListener('load', function(){ pageReady = true; tryDismiss(); });
+  }
+
+  function tryDismiss(){ if(pageReady && videoEnded) dismiss(); }
+
+  if(video){
+    // Sync progress bar with video playback
+    video.addEventListener('timeupdate', function(){
+      if(bar && video.duration){
+        bar.style.width = (video.currentTime / video.duration * 100).toFixed(1) + '%';
+      }
+    });
+    video.addEventListener('ended', function(){
+      if(bar) bar.style.width = '100%';
+      videoEnded = true;
+      tryDismiss();
+    });
+    // Fallback: video won't play (autoplay blocked, codec, etc.)
+    video.addEventListener('error', function(){
+      videoEnded = true;
+      if(bar) bar.style.width = '100%';
+      tryDismiss();
+    });
+  } else {
+    videoEnded = true;
+  }
+
+  // Hard cap — never block the user for more than 8s
+  setTimeout(function(){
+    if(!loader.classList.contains('hidden')){
+      pageReady = videoEnded = true;
+      dismiss();
+    }
+  }, 8000);
+
+  function dismiss(){
+    sessionStorage.setItem('ev_visited', '1');
+    loader.style.transition = 'opacity 0.8s ease';
+    loader.style.opacity    = '0';
+    setTimeout(function(){
+      loader.classList.add('hidden');
+      document.body.classList.remove('loading');
+      var pg = document.getElementById('page');
+      if(pg) pg.classList.add('visible');
+      if(typeof initRv === 'function') initRv();
+    }, 800);
+  }
 })();
 
 

@@ -375,6 +375,7 @@ body.loading{overflow:hidden}
   const loader=document.getElementById('loader');
   const bar=document.getElementById('loaderBar');
   if(!loader||!bar)return;
+  if(sessionStorage.getItem('ev_visited')){loader.classList.add('hidden');document.body.classList.remove('loading');setTimeout(function(){var pg=document.getElementById('page');if(pg)pg.classList.add('visible');if(typeof initRv==='function')initRv();},50);return;}
   document.body.classList.add('loading');
   setTimeout(()=>{
     const start=performance.now(),dur=700;
