@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Core pages
+Allow: /index.html
+Allow: /servicios.html
+Allow: /nosotros.html
+Allow: /contacto.html
+
+# GEO SEO pages
+Allow: /spain
+Allow: /spain.html
+Allow: /portugal
+Allow: /portugal.html
+
+# Legal pages
+Allow: /aviso-legal.html
+Allow: /terminos.html
+Allow: /privacidad.html
+Allow: /cookies.html
+
+# Assets
+Allow: /assets/
+
+# Disallow backup files
+Disallow: /*.bak$
+
+# Sitemap
+Sitemap: https://evimes.com/sitemap.xml
