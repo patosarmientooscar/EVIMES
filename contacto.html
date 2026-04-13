@@ -176,8 +176,25 @@ body.loading{overflow:hidden}
 .cbc-contact-item .ci-value{color:#fff}
 
 /* RIGHT — form */
-.cbc-right{flex:1;display:flex;flex-direction:column}
+.cbc-right{flex:1;display:flex;flex-direction:column;position:relative}
 .cbc-form-stack{display:flex;flex-direction:column;gap:26px}
+/* Thank-you state */
+.form-thankyou{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:360px;gap:20px;padding:40px 20px;opacity:0;transition:opacity .6s ease}
+.form-thankyou.visible{display:flex}
+.form-thankyou.faded{opacity:1}
+.ty-check{width:64px;height:64px;border-radius:50%;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.25);display:flex;align-items:center;justify-content:center;position:relative}
+.ty-check::after{content:'';position:absolute;inset:-8px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,255,0.12),transparent 70%);animation:tyPulse 2.5s ease-in-out infinite}
+@keyframes tyPulse{0%,100%{opacity:0.4;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+.ty-check svg{width:28px;height:28px;stroke:#00e5ff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ty-title{font-family:'Libre Baskerville',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;color:#fff;line-height:1.2}
+.ty-desc{font-family:'Inter',sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.7);line-height:1.75;max-width:300px}
+.ty-sub{font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.35);letter-spacing:.5px}
+/* Button loading state */
+.cbc-submit-btn.sending{pointer-events:none;opacity:0.6}
+.cbc-submit-btn.sending .cbc-submit-text::after{content:' ...'}
+/* Error state */
+.form-error{display:none;font-family:'Inter',sans-serif;font-size:0.82rem;color:#ff6b6b;text-align:center;margin-top:8px}
+.form-error.visible{display:block}
 .contact-label{display:block;color:#fff;font-family:'Inter',sans-serif;font-size:0.8rem;margin-bottom:6px;letter-spacing:0.5px}
 .contact-row{display:flex;gap:16px}
 .contact-row .contact-field{flex:1}
@@ -392,15 +409,9 @@ body.loading{overflow:hidden}
 
           <div class="cbc-contact-title">Contacto</div>
           <div class="cbc-contact-list">
-            <a href="tel:+34636736167" class="cbc-contact-item">
-              <span class="ci-label">Tel&eacute;fono:&nbsp;</span><span class="ci-value">+34 636 73 61 67</span>
-            </a>
             <a href="mailto:patosarmientooscar@gmail.com" class="cbc-contact-item">
               <span class="ci-label">Email:&nbsp;</span><span class="ci-value">patosarmientooscar@gmail.com</span>
             </a>
-            <div class="cbc-contact-item">
-              <span class="ci-label">Direcci&oacute;n:&nbsp;</span><span class="ci-value">Av. Cardenal Herrera Oria 171, 28034, Madrid</span>
-            </div>
           </div>
         </div>
 
@@ -409,7 +420,6 @@ body.loading{overflow:hidden}
           <form action="https://formsubmit.co/patosarmientooscar@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="Nuevo mensaje desde Evimes Web">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://evimes.com/contacto.html">
             <input type="hidden" name="_template" value="table">
             <!-- Intel fields — populated by JS before submit -->
             <input type="hidden" name="📍 Ubicación" id="intel-ubicacion">
