@@ -33,7 +33,6 @@
   <meta name="twitter:description" content="Dise&ntilde;o web, desarrollo con IA, SEO y marketing digital para negocios locales en Madrid.">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="video" href="assets/loadingpage/Logo_Animation_For_Website_Loading.mp4" type="video/mp4">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
 <style>
@@ -60,18 +59,8 @@
     *{cursor:auto!important}
     a,button,.btn-primary,.cb,.bp,.bc,[role="button"],[onclick],input[type="submit"]{cursor:pointer!important}
 
-    /* LOADER */
-    #loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease,visibility 0.8s ease}
-    #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    body.loading{overflow:hidden}
-    .loader-inner{display:flex;flex-direction:column;align-items:center;gap:28px}
-    #loaderVideo{width:min(440px,85vw);height:auto;display:block}
-    .loader-bar-wrap{width:min(300px,65vw);height:2px;background:rgba(255,255,255,0.1);overflow:hidden;border-radius:2px;opacity:0;animation:ldrBarIn 0.5s ease 0.4s forwards}
-    @keyframes ldrBarIn{to{opacity:1}}
-    .loader-bar{height:100%;width:0%;background:linear-gradient(90deg,#00e5ff,#8b5cf6);border-radius:2px;transition:width 0.12s linear}
-
     /* PAGE */
-    #page{opacity:0;transition:opacity 1.2s cubic-bezier(.25,.1,.25,1)}
+    #page{opacity:1}
     #page.visible{opacity:1}
 
     /* NAV — floating capsule */
@@ -777,13 +766,6 @@
 <body>
 <canvas id="beamsCanvas" class="beams-bg"></canvas>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-inner">
-    <video id="loaderVideo" src="assets/loadingpage/Logo_Animation_For_Website_Loading.mp4" autoplay muted playsinline preload="auto"></video>
-    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
-  </div>
-</div>
 <!-- PAGE -->
 <div id="page">
   <nav id="navbar-capsule">
@@ -1245,80 +1227,8 @@
 </div>
 
 <script>
-// LOADER — progress bar
-(function(){
-  var loader = document.getElementById('loader');
-  var bar    = document.getElementById('loaderBar');
-  var video  = document.getElementById('loaderVideo');
-  if(!loader) return;
-
-  // ── Skip on in-session navigation ──
-  if(sessionStorage.getItem('ev_visited')){
-    loader.style.transition = 'none';
-    loader.classList.add('hidden');
-    document.body.classList.remove('loading');
-    setTimeout(function(){
-      var pg = document.getElementById('page');
-      if(pg) pg.classList.add('visible');
-      if(typeof initRv === 'function') initRv();
-    }, 50);
-    return;
-  }
-
-  document.body.classList.add('loading');
-
-  var pageReady  = document.readyState === 'complete';
-  var videoEnded = false;
-
-  if(!pageReady){
-    window.addEventListener('load', function(){ pageReady = true; tryDismiss(); });
-  }
-
-  function tryDismiss(){ if(pageReady && videoEnded) dismiss(); }
-
-  if(video){
-    // Sync progress bar with video playback
-    video.addEventListener('timeupdate', function(){
-      if(bar && video.duration){
-        bar.style.width = (video.currentTime / video.duration * 100).toFixed(1) + '%';
-      }
-    });
-    video.addEventListener('ended', function(){
-      if(bar) bar.style.width = '100%';
-      videoEnded = true;
-      tryDismiss();
-    });
-    // Fallback: video won't play (autoplay blocked, codec, etc.)
-    video.addEventListener('error', function(){
-      videoEnded = true;
-      if(bar) bar.style.width = '100%';
-      tryDismiss();
-    });
-  } else {
-    videoEnded = true;
-  }
-
-  // Hard cap — never block the user for more than 8s
-  setTimeout(function(){
-    if(!loader.classList.contains('hidden')){
-      pageReady = videoEnded = true;
-      dismiss();
-    }
-  }, 8000);
-
-  function dismiss(){
-    sessionStorage.setItem('ev_visited', '1');
-    loader.style.transition = 'opacity 0.8s ease';
-    loader.style.opacity    = '0';
-    setTimeout(function(){
-      loader.classList.add('hidden');
-      document.body.classList.remove('loading');
-      var pg = document.getElementById('page');
-      if(pg) pg.classList.add('visible');
-      if(typeof initRv === 'function') initRv();
-    }, 800);
-  }
-})();
+// Init reveals immediately — no loader
+initRv();
 
 
 

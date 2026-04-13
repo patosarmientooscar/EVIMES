@@ -87,21 +87,9 @@ body{background:var(--void);color:var(--white);font-family:var(--body);line-heig
 *{cursor:auto!important}
 a,button,[role="button"],[onclick]{cursor:pointer!important}
 
-/* LOADER */
-#loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.9s ease,visibility 0.9s ease}
-#loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-body.loading{overflow:hidden}
-.loader-inner{display:flex;flex-direction:column;align-items:center;gap:52px}
-.loader-logo-wrap{width:260px;display:flex;justify-content:center}
-.loader-logo-img{width:160px;height:auto;display:block;opacity:0;animation:ldrLogoIn 1.0s cubic-bezier(0.4,0,0.2,1) 0.3s forwards}
-@keyframes ldrLogoIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
-.loader-bar-wrap{width:100px;height:1px;background:rgba(255,255,255,0.1);overflow:hidden;opacity:0;animation:ldrFadeIn 0.4s ease 1.0s forwards}
-.loader-bar{height:100%;width:0%;background:#fff;transition:width 0.1s linear}
-@keyframes ldrFadeIn{to{opacity:1}}
 
 /* PAGE */
-#page{opacity:0;transition:opacity 1.2s cubic-bezier(.25,.1,.25,1)}
-#page.visible{opacity:1}
+#page{opacity:1}
 
 /* BEAMS BACKGROUND */
 .beams-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;filter:blur(6px);opacity:1}
@@ -375,14 +363,7 @@ body.loading{overflow:hidden}
 <body>
 <canvas id="beamsCanvas" class="beams-bg"></canvas>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-inner">
-    <div class="loader-logo-wrap">
-      <img src="assets/logo.png" class="loader-logo-img" alt="EVIMES">
     </div>
-    <div class="loader-bar-wrap">
-      <div class="loader-bar" id="loaderBar"></div>
     </div>
   </div>
 </div>
@@ -556,38 +537,6 @@ body.loading{overflow:hidden}
 </div>
 
 <script>
-// LOADER
-(function(){
-  const loader=document.getElementById('loader');
-  const bar=document.getElementById('loaderBar');
-  if(!loader||!bar)return;
-  if(sessionStorage.getItem('ev_visited')){loader.classList.add('hidden');document.body.classList.remove('loading');setTimeout(function(){var pg=document.getElementById('page');if(pg)pg.classList.add('visible');if(typeof initRv==='function')initRv();},50);return;}
-  document.body.classList.add('loading');
-  setTimeout(()=>{
-    const start=performance.now(),dur=700;
-    function tick(now){
-      const pct=Math.min(100,((now-start)/dur)*100);
-      bar.style.width=pct+'%';
-      if(pct<100){requestAnimationFrame(tick);}else{setTimeout(dismiss,500);}
-    }
-    requestAnimationFrame(tick);
-  },300);
-  function dismiss(){
-    const wrap=document.querySelector('.loader-logo-wrap');
-    if(wrap){
-      wrap.style.transition='transform 0.6s cubic-bezier(0.16,1,0.3,1),opacity 0.5s ease';
-      wrap.style.transform='scale(0.94)';
-      wrap.style.opacity='0';
-    }
-    setTimeout(()=>{
-      loader.classList.add('hidden');
-      document.body.classList.remove('loading');
-      document.getElementById('page').classList.add('visible');
-      initRv();
-    },350);
-  }
-  setTimeout(()=>{if(!loader.classList.contains('hidden'))dismiss();},4000);
-})();
 
 // REVEALS
 function initRv(){
