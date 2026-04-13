@@ -81,7 +81,7 @@
   --body:'Libre Baskerville',serif;
   --highlight-hue:210deg;
 }
-html{overflow-x:clip}
+html{overflow-x:clip;scroll-behavior:smooth}
 body{background:var(--void);color:var(--white);font-family:var(--body);line-height:1.7;overflow-x:clip}
 ::selection{background:var(--cyan30);color:var(--white)}
 *{cursor:auto!important}
@@ -688,9 +688,13 @@ function initRv(){
   nav.style.position='relative';
   nav.insertBefore(pill,nav.firstChild);
   const links=Array.from(nav.querySelectorAll('.nav-link'));
+  var _pillCache=new Map();
+  function cachePillRects(){var nr=nav.getBoundingClientRect();links.forEach(function(l){var r=l.getBoundingClientRect();_pillCache.set(l,{left:r.left-nr.left,width:r.width});});}
+  cachePillRects();
+  window.addEventListener('resize',cachePillRects,{passive:true});
   function movePill(el,show){
-    pill.style.left=el.offsetLeft+'px';
-    pill.style.width=el.offsetWidth+'px';
+    var c=_pillCache.get(el);
+    if(c){pill.style.left=c.left+'px';pill.style.width=c.width+'px';}
     pill.style.opacity=show?'1':'0';
   }
   links.forEach(function(link){
