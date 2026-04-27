@@ -266,10 +266,17 @@
     /* Mobile */
     @media(max-width:768px){
       #services-outer{padding:80px 24px 0}
-      #bento-grid{grid-template-columns:1fr;grid-template-rows:auto;padding:0;gap:16px;margin-top:40px}
+      #bento-grid{grid-template-columns:1fr;grid-template-rows:auto;padding:0;gap:14px;margin-top:40px;height:auto!important}
       .card-diseno,.card-product,.card-software,.card-logo,.card-crecimiento{grid-column:1 !important;grid-row:auto !important}
-      .card-logo{min-height:120px}
+      .card-logo{min-height:100px}
 
+      /* Bento cards — compact, title + pills only */
+      .bento-card{padding:20px 18px;height:auto!important;min-height:0}
+      .monitor-svg,.product-bulb-area,.software-img-wrap,.growth-graph,.crec-logos-col{display:none!important}
+      .card-software .card-content{padding-bottom:0}
+      .bc-title{font-size:1.05rem}
+      .bc-desc{font-size:0.8rem;line-height:1.5}
+      .bento-pill{font-size:10px;padding:5px 11px}
     }
 
     /* â"€â"€ CARDS â"€â"€ */
@@ -612,6 +619,50 @@
       .chaos-card{width:90vw;height:200px}
       .chaos-text-panel{width:100%;padding-left:0;text-align:center}
       .chaos-panel-p{margin:0 auto}
+    }
+
+    /* ── ADAPTIVE SIDE LOGO — desktop/laptop ── */
+    /* Logo center is at x = left + logoWidth/2. When rotated -90deg, visual right edge ≈ x + imgHeight/2.
+       The bento grid content starts at 40px on screens ≤ 1350px wide.
+       Goal: visual right edge ≤ 40px. With left:0 → imgHeight ≤ 80px. */
+    @media(min-width:769px) and (max-width:1490px){
+      #side-logo{left:0!important}
+      #side-logo img{height:110px!important}
+    }
+    @media(min-width:769px) and (max-width:1280px){
+      #side-logo{left:0!important}
+      #side-logo img{height:80px!important}
+    }
+    @media(min-width:769px) and (max-width:1100px){
+      #side-logo{left:0!important}
+      #side-logo img{height:60px!important}
+    }
+    /* Adjust the carousel left indent to match the smaller logo footprint */
+    @media(min-width:769px) and (max-width:1490px){
+      .tc-wrap{margin-left:90px;max-width:calc(100vw - 180px)}
+    }
+    @media(min-width:769px) and (max-width:1280px){
+      .tc-wrap{margin-left:70px;max-width:calc(100vw - 140px)}
+    }
+
+    /* ── GLOBAL MOBILE OPTIMIZATIONS ── */
+    @media(max-width:768px){
+      /* Remove vertical side logo — takes space, breaks layout */
+      #side-logo{display:none!important}
+
+      /* Carousel — undo the 160px desktop indent for the side logo */
+      .tc-wrap{max-width:100vw;margin-left:0;margin-right:0;margin-top:60px;padding:20px 0}
+
+      /* Services heading — trim the 220px gaps */
+      .sv-hd{margin-top:60px;margin-bottom:60px}
+      .sv-hd-title{font-size:clamp(1.4rem,6vw,2rem)}
+      .sv-hd-sub{font-size:0.9rem}
+
+      /* Chaos — reduce 240px top margin */
+      #chaos-section{margin-top:80px}
+
+      /* Timeline — spacing already handled, just trim step gap */
+      .tl-step{margin-bottom:60px}
     }
 
   </style>
@@ -2235,6 +2286,7 @@ function initCt(){const els=document.querySelectorAll('.stn[data-count]');const 
   },{threshold:0.1});
   io.observe(heading);
 })();
+
 </script>
 </body>
 </html>
