@@ -1,12 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- Google Tag Manager (solo se carga si el visitante acepta cookies; ver /assets/cookie-consent.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.evimesLoadGTM=function(){if(window.__evimesGTM)return;window.__evimesGTM=true;
+gtag('consent','update',{analytics_storage:'granted'});
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQHJZ9Z8');</script>
+})(window,document,'script','dataLayer','GTM-NQHJZ9Z8');};
+try{var c=JSON.parse(localStorage.getItem('evimes-cookies'));if(c&&c.v==='accepted'&&Date.now()-c.t<31536000000)evimesLoadGTM();}catch(e){}</script>
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -110,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="legal-wrap">
       <span class="legal-eyebrow">Legal</span>
       <h1 class="legal-title">Política de Cookies</h1>
-      <span class="legal-updated">Última actualización: 8 de abril de 2026</span>
+      <span class="legal-updated">Última actualización: 26 de octubre de 2026</span>
 
       <div class="legal-card">
 
@@ -125,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="legal-section">
           <h2 class="legal-h2"><span class="legal-h2-num">02</span> Tipos de cookies que utilizamos</h2>
-          <p class="legal-p">En <strong>evimes.com</strong> utilizamos los siguientes tipos de cookies:</p>
+          <p class="legal-p">En <strong>evimesweb.com</strong> utilizamos los siguientes tipos de cookies:</p>
 
           <table class="cookie-table">
             <thead>
@@ -153,18 +158,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <td>2 años</td>
               </tr>
               <tr>
-                <td>_gid</td>
-                <td>Analítica</td>
-                <td>Google Analytics</td>
-                <td>Distingue usuarios para estadísticas diarias</td>
-                <td>24 horas</td>
-              </tr>
-              <tr>
-                <td>_gat</td>
-                <td>Analítica</td>
-                <td>Google Analytics</td>
-                <td>Limita la frecuencia de solicitudes al servidor</td>
-                <td>1 minuto</td>
+                <td>evimes-cookies</td>
+                <td>Técnica / Esencial</td>
+                <td>Evimes (almacenamiento local)</td>
+                <td>Recuerda si ha aceptado o rechazado las cookies analíticas</td>
+                <td>12 meses</td>
               </tr>
               <tr>
                 <td>__vercel_*</td>
@@ -177,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </table>
 
           <p class="legal-p" style="margin-top:16px">Las <strong>cookies técnicas o esenciales</strong> son aquellas estrictamente necesarias para el funcionamiento del sitio. No requieren su consentimiento y no pueden desactivarse sin afectar al funcionamiento básico de la web.</p>
-          <p class="legal-p">Las <strong>cookies analíticas</strong> son opcionales y requieren su consentimiento previo. Nos ayudan a comprender cómo los visitantes interactúan con el sitio para poder mejorarlo.</p>
+          <p class="legal-p">Las <strong>cookies analíticas</strong> son opcionales y requieren su consentimiento previo: Google Analytics no se carga hasta que usted pulsa "Aceptar" en el aviso de cookies. Nos ayudan a comprender cómo los visitantes interactúan con el sitio para poder mejorarlo.</p>
         </div>
 
         <hr class="legal-divider">
@@ -192,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Tipo de dispositivo, sistema operativo y navegador utilizado.</li>
             <li>Ubicación geográfica aproximada (a nivel de país/ciudad, nunca exacta).</li>
           </ul>
-          <p class="legal-p">La información generada por las cookies de Google Analytics sobre su uso del sitio será transmitida y almacenada por Google en servidores de los Estados Unidos. Hemos activado la <strong>anonimización de IP</strong>, lo que significa que Google trunca la dirección IP dentro de la UE/EEE antes de su posible transferencia.</p>
+          <p class="legal-p">La información generada por las cookies de Google Analytics sobre su uso del sitio puede ser transmitida y almacenada por Google en servidores de los Estados Unidos, al amparo del Marco de Privacidad de Datos UE-EE.UU. Google Analytics 4 no registra ni almacena direcciones IP.</p>
           <p class="legal-p">Google utilizará esta información para evaluar el uso del sitio web, compilar informes de actividad para los operadores del sitio y proporcionar otros servicios relacionados. Google no asociará su dirección IP con ningún otro dato en posesión de Google.</p>
           <p class="legal-p">Puede obtener más información en la <a href="https://policies.google.com/privacy" class="legal-a" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a> y en la página de <a href="https://support.google.com/analytics/answer/6004245" class="legal-a" target="_blank" rel="noopener noreferrer">privacidad de Google Analytics</a>.</p>
         </div>
@@ -215,6 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="legal-section">
           <h2 class="legal-h2"><span class="legal-h2-num">05</span> Cómo gestionar o deshabilitar las cookies</h2>
           <p class="legal-p">Usted tiene derecho a decidir si acepta o rechaza las cookies no esenciales. Puede gestionar sus preferencias de las siguientes formas:</p>
+          <p class="legal-p"><strong>Desde esta web:</strong> puede aceptar o retirar su consentimiento en cualquier momento con el botón <a href="#" data-cookie-settings class="legal-a">Configurar cookies</a>, disponible también en el pie de todas las páginas. Si lo retira, eliminaremos las cookies de Google Analytics de su navegador.</p>
           <p class="legal-p"><strong>Configuración del navegador:</strong> la mayoría de los navegadores le permiten controlar las cookies a través de sus ajustes. A continuación encontrará los enlaces de ayuda de los navegadores más habituales:</p>
           <ul class="legal-ul">
             <li><a href="https://support.google.com/chrome/answer/95647" class="legal-a" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
@@ -321,6 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="terminos.html">Términos y Condiciones</a>
             <a href="privacidad.html">Política de Privacidad</a>
             <a href="cookies.html">Política de Cookies</a>
+            <a href="#" data-cookie-settings>Configurar cookies</a>
           </nav>
         </div>
       </div>
@@ -337,5 +337,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function(){const nav=document.getElementById('navbar-capsule');if(!nav)return;const pill=document.createElement('div');pill.style.cssText='position:absolute;border-radius:50px;background:rgba(255,255,255,0.06);pointer-events:none;top:6px;height:calc(100% - 12px);left:0;width:0;opacity:0;z-index:0;transition:left .25s ease-out,width .25s ease-out,opacity .2s ease-out';nav.style.position='relative';nav.insertBefore(pill,nav.firstChild);const links=Array.from(nav.querySelectorAll('.nav-link'));var _pc=new Map();function cpr(){var nr=nav.getBoundingClientRect();links.forEach(function(l){var r=l.getBoundingClientRect();_pc.set(l,{left:r.left-nr.left,width:r.width});});}cpr();window.addEventListener('resize',cpr,{passive:true});function mp(el,show){var c=_pc.get(el);if(c){pill.style.left=c.left+'px';pill.style.width=c.width+'px';}pill.style.opacity=show?'1':'0';}links.forEach(function(l){l.addEventListener('mouseenter',function(){if(!l.classList.contains('active'))mp(l,true);else pill.style.opacity='0';});});nav.addEventListener('mouseleave',function(){pill.style.opacity='0';});function onScroll(){nav.classList.toggle('scrolled',window.scrollY>100);}window.addEventListener('scroll',onScroll,{passive:true});onScroll();})();
 (function(){var h=document.getElementById('footer-heading');var c=document.getElementById('footer-cols');if(!h||!c)return;var done=false;var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&!done){done=true;h.classList.add('vis');setTimeout(function(){c.classList.add('vis');},200);}});},{threshold:0.1});io.observe(h);})();
 </script>
+<script src="/assets/cookie-consent.js" defer></script>
 </body>
 </html>

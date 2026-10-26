@@ -1,12 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- Google Tag Manager (solo se carga si el visitante acepta cookies; ver /assets/cookie-consent.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.evimesLoadGTM=function(){if(window.__evimesGTM)return;window.__evimesGTM=true;
+gtag('consent','update',{analytics_storage:'granted'});
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQHJZ9Z8');</script>
+})(window,document,'script','dataLayer','GTM-NQHJZ9Z8');};
+try{var c=JSON.parse(localStorage.getItem('evimes-cookies'));if(c&&c.v==='accepted'&&Date.now()-c.t<31536000000)evimesLoadGTM();}catch(e){}</script>
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -330,6 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="terminos.html">Termos e Condições</a>
             <a href="privacidad.html">Política de Privacidade</a>
             <a href="cookies.html">Política de Cookies</a>
+            <a href="#" data-cookie-settings>Configurar cookies</a>
           </nav>
         </div>
       </div>
@@ -346,5 +352,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function(){const nav=document.getElementById('navbar-capsule');if(!nav)return;const pill=document.createElement('div');pill.style.cssText='position:absolute;border-radius:50px;background:rgba(255,255,255,0.06);pointer-events:none;top:6px;height:calc(100% - 12px);left:0;width:0;opacity:0;z-index:0;transition:left .25s ease-out,width .25s ease-out,opacity .2s ease-out';nav.style.position='relative';nav.insertBefore(pill,nav.firstChild);const links=Array.from(nav.querySelectorAll('.nav-link'));var _pc=new Map();function cpr(){var nr=nav.getBoundingClientRect();links.forEach(function(l){var r=l.getBoundingClientRect();_pc.set(l,{left:r.left-nr.left,width:r.width});});}cpr();window.addEventListener('resize',cpr,{passive:true});function mp(el,show){var c=_pc.get(el);if(c){pill.style.left=c.left+'px';pill.style.width=c.width+'px';}pill.style.opacity=show?'1':'0';}links.forEach(function(l){l.addEventListener('mouseenter',function(){if(!l.classList.contains('active'))mp(l,true);else pill.style.opacity='0';});});nav.addEventListener('mouseleave',function(){pill.style.opacity='0';});function onScroll(){nav.classList.toggle('scrolled',window.scrollY>100);}window.addEventListener('scroll',onScroll,{passive:true});onScroll();})();
 (function(){var h=document.getElementById('footer-heading');var c=document.getElementById('footer-cols');if(!h||!c)return;var done=false;var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&!done){done=true;h.classList.add('vis');setTimeout(function(){c.classList.add('vis');},200);}});},{threshold:0.1});io.observe(h);})();
 </script>
+<script src="/assets/cookie-consent.js" defer></script>
 </body>
 </html>
