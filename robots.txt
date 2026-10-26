@@ -26,4 +26,4 @@ Allow: /assets/
 Disallow: /*.bak$
 
 # Sitemap
-Sitemap: https://evimes.com/sitemap.xml
+Sitemap: https://www.evimesweb.com/sitemap.xml
